@@ -35,7 +35,6 @@ import java.io.PrintWriter;
  * </p>
  *
  */
-@SuppressWarnings("serial")
 @WebServlet("/addUser")
 public class AddUserController extends HttpServlet {
 
@@ -70,14 +69,14 @@ public class AddUserController extends HttpServlet {
         PrintWriter writer = response.getWriter();
 
         // build HTML code
-        String htmlRespone = "<html>";
-        htmlRespone += "<h2>Your name is: " + name + "<br/>";
-        htmlRespone += "Your email is: " + email + "<br/>";
-        htmlRespone += "Your birthdate: " + birthdate + "</h2>";
-        htmlRespone += "</html>";
+        String htmlResponse = "<html>";
+        htmlResponse += "<h2>Your name is: " + name + "<br/>";
+        htmlResponse += "Your email is: " + email + "<br/>";
+        htmlResponse += "Your birthdate: " + birthdate + "</h2>";
+        htmlResponse += "</html>";
 
         // return response
-        writer.println(htmlRespone);
+        writer.println(htmlResponse);
 
     }
 
