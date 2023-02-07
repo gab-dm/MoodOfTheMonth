@@ -39,8 +39,6 @@ import java.io.PrintWriter;
 @WebServlet("/addUser")
 public class AddUserController extends HttpServlet {
 
-    HelloService helloService = new HelloService();
-
     @Override
     public void init() {
         System.out.println("Servlet initialized successfully");
@@ -49,7 +47,6 @@ public class AddUserController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-            req.setAttribute("helloService", helloService);
             RequestDispatcher dispatcher = req.getRequestDispatcher("/add-user.jsp");
             dispatcher.forward(req, resp);
     }
