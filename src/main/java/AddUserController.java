@@ -36,8 +36,8 @@ import java.io.PrintWriter;
  *
  */
 @SuppressWarnings("serial")
-@WebServlet("/helloJsp")
-public class HelloJspController extends HttpServlet {
+@WebServlet("/addUser")
+public class AddUserController extends HttpServlet {
 
     HelloService helloService = new HelloService();
 
@@ -50,7 +50,7 @@ public class HelloJspController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
             req.setAttribute("helloService", helloService);
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/hello-world.jsp");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/add-user.jsp");
             dispatcher.forward(req, resp);
     }
 
@@ -61,7 +61,7 @@ public class HelloJspController extends HttpServlet {
         // read form fields
         String name = request.getParameter("name");
         String email = request.getParameter("email");
-        String birthdate = request.getParameter("birthdate");
+        String birthdate = request.getParameter("date");
 
         System.out.println("name: " + name);
         System.out.println("email: " + email);
@@ -75,7 +75,8 @@ public class HelloJspController extends HttpServlet {
         // build HTML code
         String htmlRespone = "<html>";
         htmlRespone += "<h2>Your name is: " + name + "<br/>";
-        htmlRespone += "Your email is: " + email + "</h2>";
+        htmlRespone += "Your email is: " + email + "<br/>";
+        htmlRespone += "Your birthdate: " + birthdate + "</h2>";
         htmlRespone += "</html>";
 
         // return response

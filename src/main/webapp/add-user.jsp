@@ -7,7 +7,7 @@
     <title>JSP - Hello World Tutorial - Programmer Gate</title>
 </head>
 <body>
-    <%@include  file="WEB-INF/add_member.html" %>
+    <%@include  file="WEB-INF/resources/pages/add_member.html" %>
 
 </body>
 </html>
