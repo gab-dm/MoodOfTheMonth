@@ -8,6 +8,9 @@ The 4-day project has to be released in **production** on a dedicated server, an
 ![Admin Interface](/../master/screen.jpg?raw=true "Admin Panel Interface")
 ![User Interface](/../master/screen2.png?raw=true "User Panel Interface")
 
+# TRELLO
+https://trello.com/invite/b/UoF0fDCc/ATTIa2ac9b1df24717234c1145693585c7d4C6617A0C/motm
+
 # Pool Conditions
 You will develop your project as a **team**, with minimum Agile management (we recommend the Kanban method).  
 **One** git repository will be given to the team and shall be used properly. The workflow details are left to the team's appreciation.
