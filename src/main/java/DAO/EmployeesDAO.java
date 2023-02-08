@@ -43,6 +43,34 @@ public class EmployeesDAO {
     public static ArrayList<Employees> getListOfEmployees() {
         return employees;
     }
+
+    public Integer getNumberOfEmployees() {
+        String sql = "SELECT COUNT(*) AS count FROM employees";
+        PreparedStatement ps = null;
+        try {
+            ps = connection.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            int count = rs.getInt("count");
+            rs.close();
+            return count;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public ResultSet getEmployees() {
+        String sql = "SELECT * FROM employees LIMIT 10";
+        PreparedStatement ps = null;
+        try {
+            ps = connection.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            return rs;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 //    public Employees getEmployees(int id) throws SQLException {
 //        String sql = "SELECT * FROM users WHERE id = ?";
 ////        try (PreparedStatement statement = connection.prepareStatement(sql)) {

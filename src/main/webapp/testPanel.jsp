@@ -1,6 +1,8 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="Model.Employees" %>
 <%@ page import="Service.EmployeeService" %>
+<%@ page import="DAO.EmployeesDAO" %>
+<%@ page import="java.sql.ResultSet" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -80,8 +82,11 @@
                                 <i class="fa fa-user fa-5x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
-                                <% Integer n = EmployeeService.getListOfEmployees().size(); %>
-                                    <div class="huge"><%= n %></div>
+                                <%  Integer n = EmployeesDAO.getListOfEmployees().size();
+                                    EmployeesDAO employeesDAO = new EmployeesDAO();
+                                    Integer count = employeesDAO.getNumberOfEmployees();
+                                %>
+                                    <div class="huge"><%= count %></div>
                                     <div class="huge-label">Registered members</div>
                             </div>
                         </div>
@@ -164,13 +169,14 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <%  ArrayList<Employees> employees = EmployeeService.getListOfEmployees();
-                                            for (Employees employee : employees) {
+                                        <%  ArrayList<Employees> employees = EmployeesDAO.getListOfEmployees();
+                                            ResultSet rs = employeesDAO.getEmployees();
+                                            while (rs.next()) {
                                         %>
                                             <tr>
-                                                <td><%= employee.getNameEmployee() %></td>
-                                                <td><%= employee.getEmailEmployee()%></td>
-                                                <td><%= employee.getBirthDateEmployee()%></td>
+                                                <td><%= rs.getString("name") %></td>
+                                                <td><%= rs.getString("email")%></td>
+                                                <td><%= rs.getDate("birthdate")%></td>
                                                 <td class="text-right">
                                                     <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Edit</a>
                                                     <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Remove</a>
