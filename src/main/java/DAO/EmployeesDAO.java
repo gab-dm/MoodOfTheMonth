@@ -7,14 +7,18 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.text.SimpleDateFormat;
+import java.sql.*;
 
 public class EmployeesDAO {
-private String url = "jdbc:postgresql://localhost:4532/employees";
-private String password = "mypassword";
-private String username = "myusername";
+
+    private static ArrayList<Employees> employees = new ArrayList<Employees>();
     private final Connection connection;
 
-    {
+    public EmployeesDAO() {
+        String url = "jdbc:postgresql://localhost:5432/employees";
+        String password = "mypassword";
+        String username = "myusername";
+        PreparedStatement statement = null;
         try {
             connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
@@ -22,19 +26,9 @@ private String username = "myusername";
         }
     }
 
-    private static ArrayList<Employees> employees = new ArrayList<Employees>();
-
-    public EmployeesDAO(Connection connection) {
-        //this.connection = connection;
-    }
-
-    public EmployeesDAO() {
-
-    }
-
     public void addEmployees(String name, String email, Date birthDate) throws SQLException {
         employees.add(new Employees(name, email, birthDate));
-        String sql = "INSERT INTO employees (name, email, birth_date) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO employees (name, email, birthdate) VALUES (?, ?, ?)";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, name);
             statement.setString(2, email);

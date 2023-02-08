@@ -2702,3 +2702,866 @@ Caused by: java.sql.SQLException: No suitable driver found for jdbc:postgresql:/
 	at deployment.helloworld.war//DAO.EmployeesDAO.<init>(EmployeesDAO.java:19)
 	... 66 more
 
+2023-02-08 14:52:43,222 INFO  [org.jboss.modules] (main) JBoss Modules version 2.0.2.Final
+2023-02-08 14:52:43,585 INFO  [org.jboss.msc] (main) JBoss MSC version 1.4.13.Final
+2023-02-08 14:52:43,590 INFO  [org.jboss.threads] (main) JBoss Threads version 2.4.0.Final
+2023-02-08 14:52:43,653 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: WildFly Full 26.1.3.Final (WildFly Core 18.1.2.Final) starting
+2023-02-08 14:52:43,655 DEBUG [org.jboss.as.config] (MSC service thread 1-2) Configured system properties:
+	[Standalone] = 
+	file.encoding = UTF-8
+	file.separator = /
+	java.awt.headless = true
+	java.class.path = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/jboss-modules.jar
+	java.class.version = 63.0
+	java.home = /usr/lib/jvm/java-19-openjdk-amd64
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 19.0.1+10-Ubuntu-1ubuntu122.04
+	java.security.manager = allow
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 19
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Private Build
+	java.vendor.url = Unknown
+	java.vendor.url.bug = Unknown
+	java.version = 19.0.1
+	java.version.date = 2022-10-18
+	java.vm.compressedOopsMode = 32-bit
+	java.vm.info = mixed mode, sharing
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 19
+	java.vm.vendor = Private Build
+	java.vm.version = 19.0.1+10-Ubuntu-1ubuntu122.04
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	jboss.home.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final
+	jboss.host.name = laptop-1108
+	jboss.modules.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = laptop-1108
+	jboss.qualified.host.name = laptop-1108
+	jboss.server.base.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone
+	jboss.server.config.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/configuration
+	jboss.server.data.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/data
+	jboss.server.deploy.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/data/content
+	jboss.server.log.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/log
+	jboss.server.name = laptop-1108
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/tmp
+	jdk.debug = release
+	line.separator = 
+
+	logging.configuration = file:/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/configuration/logging.properties
+	module.path = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/modules
+	native.encoding = UTF-8
+	org.jboss.boot.log.file = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	os.arch = amd64
+	os.name = Linux
+	os.version = 5.15.0-58-generic
+	path.separator = :
+	stderr.encoding = UTF-8
+	stdout.encoding = UTF-8
+	sun.arch.data.model = 64
+	sun.boot.library.path = /usr/lib/jvm/java-19-openjdk-amd64/lib
+	sun.cpu.endian = little
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/jboss-modules.jar -mp /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/modules org.jboss.as.standalone -Djboss.home.dir=/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final -Djboss.server.base.dir=/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	user.country = FR
+	user.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth
+	user.home = /home/takima
+	user.language = fr
+	user.name = takima
+	user.timezone = Europe/Paris
+2023-02-08 14:52:43,656 DEBUG [org.jboss.as.config] (MSC service thread 1-2) VM Arguments: -D[Standalone] -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldaps=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED -Djava.security.manager=allow -Dorg.jboss.boot.log.file=/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/log/server.log -Dlogging.configuration=file:/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/configuration/logging.properties 
+2023-02-08 14:52:44,066 INFO  [org.wildfly.security] (ServerService Thread Pool -- 20) ELY00001: WildFly Elytron version 1.19.1.Final
+2023-02-08 14:52:44,380 INFO  [org.jboss.as.repository] (ServerService Thread Pool -- 22) WFLYDR0001: Content added at location /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/data/content/61/cf944af754deb5ea1d5bb0561a10b5128f5053/content
+2023-02-08 14:52:44,405 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2023-02-08 14:52:44,415 INFO  [org.xnio] (MSC service thread 1-7) XNIO version 3.8.7.Final
+2023-02-08 14:52:44,421 INFO  [org.xnio.nio] (MSC service thread 1-7) XNIO NIO Implementation Version 3.8.7.Final
+2023-02-08 14:52:44,438 INFO  [org.wildfly.extension.elytron.oidc._private] (ServerService Thread Pool -- 52) WFLYOIDC0001: Activating WildFly Elytron OIDC Subsystem
+2023-02-08 14:52:44,440 INFO  [org.wildfly.extension.health] (ServerService Thread Pool -- 53) WFLYHEALTH0001: Activating Base Health Subsystem
+2023-02-08 14:52:44,441 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 54) WFLYCLINF0001: Activating Infinispan subsystem.
+2023-02-08 14:52:44,441 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 56) WFLYRS0016: RESTEasy version 4.7.7.Final
+2023-02-08 14:52:44,444 INFO  [org.wildfly.extension.microprofile.jwt.smallrye] (ServerService Thread Pool -- 65) WFLYJWT0001: Activating MicroProfile JWT Subsystem
+2023-02-08 14:52:44,444 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 67) WFLYNAM0001: Activating Naming Subsystem
+2023-02-08 14:52:44,444 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 55) WFLYIO001: Worker 'default' has auto-configured to 24 IO threads with 192 max task threads based on your 12 available processors
+2023-02-08 14:52:44,446 INFO  [org.wildfly.extension.microprofile.opentracing] (ServerService Thread Pool -- 66) WFLYTRACEXT0001: Activating MicroProfile OpenTracing Subsystem
+2023-02-08 14:52:44,447 INFO  [org.wildfly.extension.microprofile.config.smallrye] (ServerService Thread Pool -- 64) WFLYCONF0001: Activating MicroProfile Config Subsystem
+2023-02-08 14:52:44,456 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 61) WFLYJSF0007: Activated the following Jakarta Server Faces Implementations: [main]
+2023-02-08 14:52:44,460 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 74) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+2023-02-08 14:52:44,465 INFO  [org.jboss.as.connector] (MSC service thread 1-3) WFLYJCA0009: Starting Jakarta Connectors Subsystem (WildFly/IronJacamar 1.5.3.Final)
+2023-02-08 14:52:44,469 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 76) WFLYWS0002: Activating WebServices Extension
+2023-02-08 14:52:44,471 INFO  [org.wildfly.extension.metrics] (ServerService Thread Pool -- 63) WFLYMETRICS0001: Activating Base Metrics Subsystem
+2023-02-08 14:52:44,482 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 44) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
+2023-02-08 14:52:44,485 INFO  [org.jboss.remoting] (MSC service thread 1-2) JBoss Remoting version 5.0.25.Final
+2023-02-08 14:52:44,491 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-8) WFLYJCA0018: Started Driver service with driver-name = h2
+2023-02-08 14:52:44,503 INFO  [org.jboss.as.naming] (MSC service thread 1-1) WFLYNAM0003: Starting Naming Service
+2023-02-08 14:52:44,505 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-1) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2023-02-08 14:52:44,513 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0003: Undertow 2.2.19.Final starting
+2023-02-08 14:52:44,544 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-4) WFLYELY00023: KeyStore file '/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/configuration/application.keystore' does not exist. Used blank.
+2023-02-08 14:52:44,554 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-2) WFLYELY01084: KeyStore /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self-signed certificate for host localhost
+2023-02-08 14:52:44,571 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 75) WFLYUT0014: Creating file handler for path '/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+2023-02-08 14:52:44,573 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0012: Started server default-server.
+2023-02-08 14:52:44,574 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) Queuing requests.
+2023-02-08 14:52:44,575 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0018: Host default-host starting
+2023-02-08 14:52:44,580 INFO  [org.jboss.as.ejb3] (MSC service thread 1-3) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 192 (per class), which is derived from thread worker pool sizing.
+2023-02-08 14:52:44,583 INFO  [org.jboss.as.ejb3] (MSC service thread 1-5) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 48 (per class), which is derived from the number of CPUs on this host.
+2023-02-08 14:52:44,616 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
+2023-02-08 14:52:44,650 INFO  [org.jboss.as.ejb3] (MSC service thread 1-2) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+2023-02-08 14:52:44,664 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
+2023-02-08 14:52:44,679 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2023-02-08 14:52:44,745 INFO  [org.jboss.as.patching] (MSC service thread 1-8) WFLYPAT0050: WildFly Full cumulative patch ID is: base, one-off patches include: none
+2023-02-08 14:52:44,746 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-3) WFLYDS0013: Started FileSystemDeploymentService for directory /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/deployments
+2023-02-08 14:52:44,751 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) WFLYSRV0027: Starting deployment of "helloworld.war" (runtime-name: "helloworld.war")
+2023-02-08 14:52:44,779 INFO  [org.jboss.ws.common.management] (MSC service thread 1-2) JBWS022052: Starting JBossWS 5.5.0.Final (Apache CXF 3.4.10) 
+2023-02-08 14:52:45,293 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 78) ISPN000128: Infinispan version: Infinispan 'Triskaidekaphobia' 13.0.10.Final
+2023-02-08 14:52:45,340 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 78) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.spi.marshalling.InfinispanProtoStreamMarshaller'
+2023-02-08 14:52:45,565 INFO  [org.infinispan.CONFIG] (MSC service thread 1-4) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2023-02-08 14:52:45,567 INFO  [org.infinispan.CONFIG] (MSC service thread 1-4) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2023-02-08 14:52:45,574 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 78) ISPN000025: wakeUpInterval is <= 0, not starting expired purge thread
+2023-02-08 14:52:45,577 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 78) WFLYCLINF0002: Started http-remoting-connector cache from ejb container
+2023-02-08 14:52:45,629 INFO  [stdout] (ServerService Thread Pool -- 88) Servlet initialized successfully
+2023-02-08 14:52:45,629 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 88) WFLYUT0021: Registered web context: '/helloworld' for server 'default-server'
+2023-02-08 14:52:45,664 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 45) WFLYSRV0010: Deployed "helloworld.war" (runtime-name : "helloworld.war")
+2023-02-08 14:52:45,687 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2023-02-08 14:52:45,688 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 26.1.3.Final (WildFly Core 18.1.2.Final) started in 2686ms - Started 435 of 637 services (341 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml
+2023-02-08 14:52:45,689 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2023-02-08 14:52:45,689 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2023-02-08 14:52:53,916 INFO  [stdout] (default task-1) Servlet initialized successfully
+2023-02-08 14:52:56,741 INFO  [stdout] (default task-5) Servlet initialized successfully
+2023-02-08 14:53:00,130 ERROR [io.undertow.request] (default task-4) UT005023: Exception handling request to /helloworld/addUser: javax.servlet.ServletException: UT010013: Could not instantiate Controller.Employees.AddUserController
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:306)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.core.ManagedServlet.forceInit(ManagedServlet.java:212)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletChain.forceInit(ServletChain.java:130)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:63)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at org.wildfly.security.elytron-web.undertow-server@1.10.1.Final//org.wildfly.elytron.web.undertow.server.ElytronRunAsHandler.lambda$handleRequest$1(ElytronRunAsHandler.java:68)
+	at org.wildfly.security.elytron-base@1.19.1.Final//org.wildfly.security.auth.server.FlexibleIdentityAssociation.runAsFunctionEx(FlexibleIdentityAssociation.java:103)
+	at org.wildfly.security.elytron-base@1.19.1.Final//org.wildfly.security.auth.server.Scoped.runAsFunctionEx(Scoped.java:161)
+	at org.wildfly.security.elytron-base@1.19.1.Final//org.wildfly.security.auth.server.Scoped.runAs(Scoped.java:73)
+	at org.wildfly.security.elytron-web.undertow-server@1.10.1.Final//org.wildfly.elytron.web.undertow.server.ElytronRunAsHandler.handleRequest(ElytronRunAsHandler.java:67)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.core@2.2.19.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.core@2.2.19.Final//io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.core@2.2.19.Final//io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at org.wildfly.security.elytron-web.undertow-server-servlet@1.10.1.Final//org.wildfly.elytron.web.undertow.server.servlet.CleanUpHandler.handleRequest(CleanUpHandler.java:38)
+	at io.undertow.core@2.2.19.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:61)
+	at io.undertow.core@2.2.19.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.deployment.GlobalRequestControllerHandler.handleRequest(GlobalRequestControllerHandler.java:68)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.core@2.2.19.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:275)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:79)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:134)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:131)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1544)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1544)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1544)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1544)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:255)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:79)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:100)
+	at io.undertow.core@2.2.19.Final//io.undertow.server.Connectors.executeRootHandler(Connectors.java:387)
+	at io.undertow.core@2.2.19.Final//io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:852)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+	at org.jboss.xnio@3.8.7.Final//org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: java.lang.IllegalStateException: WFLYEE0042: Failed to construct component instance
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.BasicComponent.constructComponentInstance(BasicComponent.java:170)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.BasicComponent.constructComponentInstance(BasicComponent.java:141)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.BasicComponent.createInstance(BasicComponent.java:88)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.ComponentRegistry$ComponentManagedReferenceFactory.getReference(ComponentRegistry.java:163)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$6.createInstance(UndertowDeploymentInfoService.java:1239)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:304)
+	... 44 more
+Caused by: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.ConstructorComponentFactory.create(ConstructorComponentFactory.java:27)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.ComponentInstantiatorInterceptor.processInvocation(ComponentInstantiatorInterceptor.java:67)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.ChainedInterceptor.processInvocation(ChainedInterceptor.java:53)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.AroundConstructInterceptorFactory$1.processInvocation(AroundConstructInterceptorFactory.java:26)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.concurrent.ConcurrentContextInterceptor.processInvocation(ConcurrentContextInterceptor.java:45)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.ContextClassLoaderInterceptor.processInvocation(ContextClassLoaderInterceptor.java:60)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.ChainedInterceptor.processInvocation(ChainedInterceptor.java:53)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.BasicComponent.constructComponentInstance(BasicComponent.java:168)
+	... 49 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:79)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.ConstructorComponentFactory.create(ConstructorComponentFactory.java:24)
+	... 60 more
+Caused by: java.lang.RuntimeException: java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:4532/employees
+	at deployment.helloworld.war//DAO.EmployeesDAO.<init>(EmployeesDAO.java:21)
+	at deployment.helloworld.war//Service.EmployeeService.<init>(EmployeeService.java:13)
+	at deployment.helloworld.war//Controller.Employees.AddUserController.<init>(AddUserController.java:37)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	... 63 more
+Caused by: java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:4532/employees
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:708)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at deployment.helloworld.war//DAO.EmployeesDAO.<init>(EmployeesDAO.java:19)
+	... 66 more
+
+2023-02-08 14:56:59,289 INFO  [org.jboss.as.server] (Thread-1) WFLYSRV0272: Suspending server
+2023-02-08 14:56:59,292 INFO  [org.jboss.as.ejb3] (Thread-1) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+2023-02-08 14:56:59,294 INFO  [org.jboss.as.server] (Thread-1) WFLYSRV0220: Server shutdown has been requested via an OS signal
+2023-02-08 14:56:59,300 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-7) WFLYMAIL0002: Unbound mail session [java:jboss/mail/Default]
+2023-02-08 14:56:59,301 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 91) WFLYUT0022: Unregistered web context: '/helloworld' from server 'default-server'
+2023-02-08 14:56:59,303 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0019: Host default-host stopping
+2023-02-08 14:56:59,304 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+2023-02-08 14:56:59,305 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0019: Stopped Driver service with driver-name = h2
+2023-02-08 14:56:59,310 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 93) WFLYCLINF0003: Stopped http-remoting-connector cache from ejb container
+2023-02-08 14:56:59,315 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0008: Undertow HTTP listener default suspending
+2023-02-08 14:56:59,315 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0008: Undertow HTTPS listener https suspending
+2023-02-08 14:56:59,315 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 127.0.0.1:8443
+2023-02-08 14:56:59,315 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8080
+2023-02-08 14:56:59,316 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0004: Undertow 2.2.19.Final stopping
+2023-02-08 14:56:59,318 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0028: Stopped deployment helloworld.war (runtime-name: helloworld.war) in 23ms
+2023-02-08 14:56:59,320 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0050: WildFly Full 26.1.3.Final (WildFly Core 18.1.2.Final) stopped in 23ms
+2023-02-08 14:57:03,835 INFO  [org.jboss.modules] (main) JBoss Modules version 2.0.2.Final
+2023-02-08 14:57:04,137 INFO  [org.jboss.msc] (main) JBoss MSC version 1.4.13.Final
+2023-02-08 14:57:04,142 INFO  [org.jboss.threads] (main) JBoss Threads version 2.4.0.Final
+2023-02-08 14:57:04,202 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: WildFly Full 26.1.3.Final (WildFly Core 18.1.2.Final) starting
+2023-02-08 14:57:04,203 DEBUG [org.jboss.as.config] (MSC service thread 1-2) Configured system properties:
+	[Standalone] = 
+	file.encoding = UTF-8
+	file.separator = /
+	java.awt.headless = true
+	java.class.path = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/jboss-modules.jar
+	java.class.version = 63.0
+	java.home = /usr/lib/jvm/java-19-openjdk-amd64
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 19.0.1+10-Ubuntu-1ubuntu122.04
+	java.security.manager = allow
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 19
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Private Build
+	java.vendor.url = Unknown
+	java.vendor.url.bug = Unknown
+	java.version = 19.0.1
+	java.version.date = 2022-10-18
+	java.vm.compressedOopsMode = 32-bit
+	java.vm.info = mixed mode, sharing
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 19
+	java.vm.vendor = Private Build
+	java.vm.version = 19.0.1+10-Ubuntu-1ubuntu122.04
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	jboss.home.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final
+	jboss.host.name = laptop-1108
+	jboss.modules.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = laptop-1108
+	jboss.qualified.host.name = laptop-1108
+	jboss.server.base.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone
+	jboss.server.config.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/configuration
+	jboss.server.data.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/data
+	jboss.server.deploy.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/data/content
+	jboss.server.log.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/log
+	jboss.server.name = laptop-1108
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/tmp
+	jdk.debug = release
+	line.separator = 
+
+	logging.configuration = file:/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/configuration/logging.properties
+	module.path = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/modules
+	native.encoding = UTF-8
+	org.jboss.boot.log.file = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	os.arch = amd64
+	os.name = Linux
+	os.version = 5.15.0-58-generic
+	path.separator = :
+	stderr.encoding = UTF-8
+	stdout.encoding = UTF-8
+	sun.arch.data.model = 64
+	sun.boot.library.path = /usr/lib/jvm/java-19-openjdk-amd64/lib
+	sun.cpu.endian = little
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/jboss-modules.jar -mp /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/modules org.jboss.as.standalone -Djboss.home.dir=/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final -Djboss.server.base.dir=/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	user.country = FR
+	user.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth
+	user.home = /home/takima
+	user.language = fr
+	user.name = takima
+	user.timezone = Europe/Paris
+2023-02-08 14:57:04,204 DEBUG [org.jboss.as.config] (MSC service thread 1-2) VM Arguments: -D[Standalone] -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldaps=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED -Djava.security.manager=allow -Dorg.jboss.boot.log.file=/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/log/server.log -Dlogging.configuration=file:/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/configuration/logging.properties 
+2023-02-08 14:57:04,534 INFO  [org.wildfly.security] (ServerService Thread Pool -- 24) ELY00001: WildFly Elytron version 1.19.1.Final
+2023-02-08 14:57:04,869 INFO  [org.jboss.as.repository] (ServerService Thread Pool -- 37) WFLYDR0001: Content added at location /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/data/content/1f/96e9bdae3d35cc1e55ecfda8ca56b2e5584645/content
+2023-02-08 14:57:04,897 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2023-02-08 14:57:04,909 INFO  [org.xnio] (MSC service thread 1-8) XNIO version 3.8.7.Final
+2023-02-08 14:57:04,914 INFO  [org.xnio.nio] (MSC service thread 1-8) XNIO NIO Implementation Version 3.8.7.Final
+2023-02-08 14:57:04,931 INFO  [org.wildfly.extension.elytron.oidc._private] (ServerService Thread Pool -- 52) WFLYOIDC0001: Activating WildFly Elytron OIDC Subsystem
+2023-02-08 14:57:04,931 INFO  [org.wildfly.extension.health] (ServerService Thread Pool -- 53) WFLYHEALTH0001: Activating Base Health Subsystem
+2023-02-08 14:57:04,931 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 54) WFLYCLINF0001: Activating Infinispan subsystem.
+2023-02-08 14:57:04,933 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 56) WFLYRS0016: RESTEasy version 4.7.7.Final
+2023-02-08 14:57:04,934 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 55) WFLYIO001: Worker 'default' has auto-configured to 24 IO threads with 192 max task threads based on your 12 available processors
+2023-02-08 14:57:04,939 INFO  [org.wildfly.extension.microprofile.config.smallrye] (ServerService Thread Pool -- 64) WFLYCONF0001: Activating MicroProfile Config Subsystem
+2023-02-08 14:57:04,943 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 74) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+2023-02-08 14:57:04,944 INFO  [org.wildfly.extension.microprofile.jwt.smallrye] (ServerService Thread Pool -- 65) WFLYJWT0001: Activating MicroProfile JWT Subsystem
+2023-02-08 14:57:04,946 INFO  [org.wildfly.extension.metrics] (ServerService Thread Pool -- 63) WFLYMETRICS0001: Activating Base Metrics Subsystem
+2023-02-08 14:57:04,948 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 61) WFLYJSF0007: Activated the following Jakarta Server Faces Implementations: [main]
+2023-02-08 14:57:04,948 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 67) WFLYNAM0001: Activating Naming Subsystem
+2023-02-08 14:57:04,951 INFO  [org.wildfly.extension.microprofile.opentracing] (ServerService Thread Pool -- 66) WFLYTRACEXT0001: Activating MicroProfile OpenTracing Subsystem
+2023-02-08 14:57:04,966 INFO  [org.jboss.as.connector] (MSC service thread 1-3) WFLYJCA0009: Starting Jakarta Connectors Subsystem (WildFly/IronJacamar 1.5.3.Final)
+2023-02-08 14:57:04,973 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 76) WFLYWS0002: Activating WebServices Extension
+2023-02-08 14:57:04,990 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 44) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
+2023-02-08 14:57:04,993 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0018: Started Driver service with driver-name = h2
+2023-02-08 14:57:04,994 INFO  [org.jboss.as.naming] (MSC service thread 1-6) WFLYNAM0003: Starting Naming Service
+2023-02-08 14:57:04,995 INFO  [org.jboss.remoting] (MSC service thread 1-8) JBoss Remoting version 5.0.25.Final
+2023-02-08 14:57:04,995 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-7) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2023-02-08 14:57:05,001 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0003: Undertow 2.2.19.Final starting
+2023-02-08 14:57:05,040 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-1) WFLYELY00023: KeyStore file '/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/configuration/application.keystore' does not exist. Used blank.
+2023-02-08 14:57:05,051 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-5) WFLYELY01084: KeyStore /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self-signed certificate for host localhost
+2023-02-08 14:57:05,065 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 75) WFLYUT0014: Creating file handler for path '/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+2023-02-08 14:57:05,066 INFO  [org.jboss.as.ejb3] (MSC service thread 1-2) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 192 (per class), which is derived from thread worker pool sizing.
+2023-02-08 14:57:05,066 INFO  [org.jboss.as.ejb3] (MSC service thread 1-1) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 48 (per class), which is derived from the number of CPUs on this host.
+2023-02-08 14:57:05,073 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0012: Started server default-server.
+2023-02-08 14:57:05,074 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) Queuing requests.
+2023-02-08 14:57:05,075 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0018: Host default-host starting
+2023-02-08 14:57:05,127 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
+2023-02-08 14:57:05,160 INFO  [org.jboss.as.ejb3] (MSC service thread 1-7) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+2023-02-08 14:57:05,172 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
+2023-02-08 14:57:05,200 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2023-02-08 14:57:05,265 INFO  [org.jboss.as.patching] (MSC service thread 1-4) WFLYPAT0050: WildFly Full cumulative patch ID is: base, one-off patches include: none
+2023-02-08 14:57:05,267 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-5) WFLYDS0013: Started FileSystemDeploymentService for directory /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/deployments
+2023-02-08 14:57:05,270 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0027: Starting deployment of "helloworld.war" (runtime-name: "helloworld.war")
+2023-02-08 14:57:05,300 INFO  [org.jboss.ws.common.management] (MSC service thread 1-2) JBWS022052: Starting JBossWS 5.5.0.Final (Apache CXF 3.4.10) 
+2023-02-08 14:57:05,816 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 78) ISPN000128: Infinispan version: Infinispan 'Triskaidekaphobia' 13.0.10.Final
+2023-02-08 14:57:05,861 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 78) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.spi.marshalling.InfinispanProtoStreamMarshaller'
+2023-02-08 14:57:06,061 INFO  [org.infinispan.CONFIG] (MSC service thread 1-4) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2023-02-08 14:57:06,062 INFO  [org.infinispan.CONFIG] (MSC service thread 1-4) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2023-02-08 14:57:06,069 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 78) ISPN000025: wakeUpInterval is <= 0, not starting expired purge thread
+2023-02-08 14:57:06,071 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 78) WFLYCLINF0002: Started http-remoting-connector cache from ejb container
+2023-02-08 14:57:06,130 INFO  [stdout] (ServerService Thread Pool -- 88) Servlet initialized successfully
+2023-02-08 14:57:06,130 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 88) WFLYUT0021: Registered web context: '/helloworld' for server 'default-server'
+2023-02-08 14:57:06,176 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 45) WFLYSRV0010: Deployed "helloworld.war" (runtime-name : "helloworld.war")
+2023-02-08 14:57:06,201 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2023-02-08 14:57:06,202 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 26.1.3.Final (WildFly Core 18.1.2.Final) started in 2589ms - Started 435 of 637 services (341 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml
+2023-02-08 14:57:06,203 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2023-02-08 14:57:06,203 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2023-02-08 14:57:14,070 INFO  [stdout] (default task-1) Servlet initialized successfully
+2023-02-08 14:57:16,397 ERROR [io.undertow.request] (default task-1) UT005023: Exception handling request to /helloworld/addUser: javax.servlet.ServletException: UT010013: Could not instantiate Controller.Employees.AddUserController
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:306)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.core.ManagedServlet.forceInit(ManagedServlet.java:212)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletChain.forceInit(ServletChain.java:130)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:63)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at org.wildfly.security.elytron-web.undertow-server@1.10.1.Final//org.wildfly.elytron.web.undertow.server.ElytronRunAsHandler.lambda$handleRequest$1(ElytronRunAsHandler.java:68)
+	at org.wildfly.security.elytron-base@1.19.1.Final//org.wildfly.security.auth.server.FlexibleIdentityAssociation.runAsFunctionEx(FlexibleIdentityAssociation.java:103)
+	at org.wildfly.security.elytron-base@1.19.1.Final//org.wildfly.security.auth.server.Scoped.runAsFunctionEx(Scoped.java:161)
+	at org.wildfly.security.elytron-base@1.19.1.Final//org.wildfly.security.auth.server.Scoped.runAs(Scoped.java:73)
+	at org.wildfly.security.elytron-web.undertow-server@1.10.1.Final//org.wildfly.elytron.web.undertow.server.ElytronRunAsHandler.handleRequest(ElytronRunAsHandler.java:67)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.core@2.2.19.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.core@2.2.19.Final//io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.core@2.2.19.Final//io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at org.wildfly.security.elytron-web.undertow-server-servlet@1.10.1.Final//org.wildfly.elytron.web.undertow.server.servlet.CleanUpHandler.handleRequest(CleanUpHandler.java:38)
+	at io.undertow.core@2.2.19.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:61)
+	at io.undertow.core@2.2.19.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.deployment.GlobalRequestControllerHandler.handleRequest(GlobalRequestControllerHandler.java:68)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.core@2.2.19.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:275)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:79)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:134)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:131)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1544)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1544)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1544)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1544)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:255)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:79)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:100)
+	at io.undertow.core@2.2.19.Final//io.undertow.server.Connectors.executeRootHandler(Connectors.java:387)
+	at io.undertow.core@2.2.19.Final//io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:852)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+	at org.jboss.xnio@3.8.7.Final//org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: java.lang.IllegalStateException: WFLYEE0042: Failed to construct component instance
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.BasicComponent.constructComponentInstance(BasicComponent.java:170)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.BasicComponent.constructComponentInstance(BasicComponent.java:141)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.BasicComponent.createInstance(BasicComponent.java:88)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.ComponentRegistry$ComponentManagedReferenceFactory.getReference(ComponentRegistry.java:163)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$6.createInstance(UndertowDeploymentInfoService.java:1239)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:304)
+	... 44 more
+Caused by: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.ConstructorComponentFactory.create(ConstructorComponentFactory.java:27)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.ComponentInstantiatorInterceptor.processInvocation(ComponentInstantiatorInterceptor.java:67)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.ChainedInterceptor.processInvocation(ChainedInterceptor.java:53)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.AroundConstructInterceptorFactory$1.processInvocation(AroundConstructInterceptorFactory.java:26)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.concurrent.ConcurrentContextInterceptor.processInvocation(ConcurrentContextInterceptor.java:45)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.ContextClassLoaderInterceptor.processInvocation(ContextClassLoaderInterceptor.java:60)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.ChainedInterceptor.processInvocation(ChainedInterceptor.java:53)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.BasicComponent.constructComponentInstance(BasicComponent.java:168)
+	... 49 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:79)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.ConstructorComponentFactory.create(ConstructorComponentFactory.java:24)
+	... 60 more
+Caused by: java.lang.RuntimeException: java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:5432/employees
+	at deployment.helloworld.war//DAO.EmployeesDAO.<init>(EmployeesDAO.java:21)
+	at deployment.helloworld.war//Service.EmployeeService.<init>(EmployeeService.java:13)
+	at deployment.helloworld.war//Controller.Employees.AddUserController.<init>(AddUserController.java:37)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	... 63 more
+Caused by: java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:5432/employees
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:708)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at deployment.helloworld.war//DAO.EmployeesDAO.<init>(EmployeesDAO.java:19)
+	... 66 more
+
+2023-02-08 14:59:35,882 INFO  [org.jboss.as.server] (Thread-1) WFLYSRV0272: Suspending server
+2023-02-08 14:59:35,885 INFO  [org.jboss.as.ejb3] (Thread-1) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+2023-02-08 14:59:35,886 INFO  [org.jboss.as.server] (Thread-1) WFLYSRV0220: Server shutdown has been requested via an OS signal
+2023-02-08 14:59:35,892 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-8) WFLYMAIL0002: Unbound mail session [java:jboss/mail/Default]
+2023-02-08 14:59:35,894 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 91) WFLYUT0022: Unregistered web context: '/helloworld' from server 'default-server'
+2023-02-08 14:59:35,896 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0019: Host default-host stopping
+2023-02-08 14:59:35,896 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-7) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+2023-02-08 14:59:35,897 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-5) WFLYJCA0019: Stopped Driver service with driver-name = h2
+2023-02-08 14:59:35,902 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 94) WFLYCLINF0003: Stopped http-remoting-connector cache from ejb container
+2023-02-08 14:59:35,909 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0008: Undertow HTTP listener default suspending
+2023-02-08 14:59:35,909 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0008: Undertow HTTPS listener https suspending
+2023-02-08 14:59:35,909 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8080
+2023-02-08 14:59:35,909 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 127.0.0.1:8443
+2023-02-08 14:59:35,910 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0004: Undertow 2.2.19.Final stopping
+2023-02-08 14:59:35,912 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0028: Stopped deployment helloworld.war (runtime-name: helloworld.war) in 24ms
+2023-02-08 14:59:35,916 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0050: WildFly Full 26.1.3.Final (WildFly Core 18.1.2.Final) stopped in 27ms
+2023-02-08 14:59:40,414 INFO  [org.jboss.modules] (main) JBoss Modules version 2.0.2.Final
+2023-02-08 14:59:40,822 INFO  [org.jboss.msc] (main) JBoss MSC version 1.4.13.Final
+2023-02-08 14:59:40,827 INFO  [org.jboss.threads] (main) JBoss Threads version 2.4.0.Final
+2023-02-08 14:59:40,899 INFO  [org.jboss.as] (MSC service thread 1-1) WFLYSRV0049: WildFly Full 26.1.3.Final (WildFly Core 18.1.2.Final) starting
+2023-02-08 14:59:40,900 DEBUG [org.jboss.as.config] (MSC service thread 1-1) Configured system properties:
+	[Standalone] = 
+	file.encoding = UTF-8
+	file.separator = /
+	java.awt.headless = true
+	java.class.path = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/jboss-modules.jar
+	java.class.version = 63.0
+	java.home = /usr/lib/jvm/java-19-openjdk-amd64
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 19.0.1+10-Ubuntu-1ubuntu122.04
+	java.security.manager = allow
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 19
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Private Build
+	java.vendor.url = Unknown
+	java.vendor.url.bug = Unknown
+	java.version = 19.0.1
+	java.version.date = 2022-10-18
+	java.vm.compressedOopsMode = 32-bit
+	java.vm.info = mixed mode, sharing
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 19
+	java.vm.vendor = Private Build
+	java.vm.version = 19.0.1+10-Ubuntu-1ubuntu122.04
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	jboss.home.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final
+	jboss.host.name = laptop-1108
+	jboss.modules.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = laptop-1108
+	jboss.qualified.host.name = laptop-1108
+	jboss.server.base.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone
+	jboss.server.config.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/configuration
+	jboss.server.data.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/data
+	jboss.server.deploy.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/data/content
+	jboss.server.log.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/log
+	jboss.server.name = laptop-1108
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/tmp
+	jdk.debug = release
+	line.separator = 
+
+	logging.configuration = file:/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/configuration/logging.properties
+	module.path = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/modules
+	native.encoding = UTF-8
+	org.jboss.boot.log.file = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	os.arch = amd64
+	os.name = Linux
+	os.version = 5.15.0-58-generic
+	path.separator = :
+	stderr.encoding = UTF-8
+	stdout.encoding = UTF-8
+	sun.arch.data.model = 64
+	sun.boot.library.path = /usr/lib/jvm/java-19-openjdk-amd64/lib
+	sun.cpu.endian = little
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/jboss-modules.jar -mp /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/modules org.jboss.as.standalone -Djboss.home.dir=/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final -Djboss.server.base.dir=/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	user.country = FR
+	user.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth
+	user.home = /home/takima
+	user.language = fr
+	user.name = takima
+	user.timezone = Europe/Paris
+2023-02-08 14:59:40,902 DEBUG [org.jboss.as.config] (MSC service thread 1-1) VM Arguments: -D[Standalone] -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldaps=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED -Djava.security.manager=allow -Dorg.jboss.boot.log.file=/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/log/server.log -Dlogging.configuration=file:/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/configuration/logging.properties 
+2023-02-08 14:59:41,296 INFO  [org.wildfly.security] (ServerService Thread Pool -- 25) ELY00001: WildFly Elytron version 1.19.1.Final
+2023-02-08 14:59:41,671 INFO  [org.jboss.as.repository] (ServerService Thread Pool -- 4) WFLYDR0001: Content added at location /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/data/content/4a/0be30680bfa38c4e0fdc15e20b889eeb4c626a/content
+2023-02-08 14:59:41,694 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2023-02-08 14:59:41,705 INFO  [org.xnio] (MSC service thread 1-1) XNIO version 3.8.7.Final
+2023-02-08 14:59:41,709 INFO  [org.xnio.nio] (MSC service thread 1-1) XNIO NIO Implementation Version 3.8.7.Final
+2023-02-08 14:59:41,731 INFO  [org.wildfly.extension.elytron.oidc._private] (ServerService Thread Pool -- 52) WFLYOIDC0001: Activating WildFly Elytron OIDC Subsystem
+2023-02-08 14:59:41,738 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 56) WFLYRS0016: RESTEasy version 4.7.7.Final
+2023-02-08 14:59:41,739 INFO  [org.wildfly.extension.microprofile.config.smallrye] (ServerService Thread Pool -- 64) WFLYCONF0001: Activating MicroProfile Config Subsystem
+2023-02-08 14:59:41,739 INFO  [org.wildfly.extension.microprofile.jwt.smallrye] (ServerService Thread Pool -- 65) WFLYJWT0001: Activating MicroProfile JWT Subsystem
+2023-02-08 14:59:41,746 INFO  [org.wildfly.extension.health] (ServerService Thread Pool -- 53) WFLYHEALTH0001: Activating Base Health Subsystem
+2023-02-08 14:59:41,750 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 61) WFLYJSF0007: Activated the following Jakarta Server Faces Implementations: [main]
+2023-02-08 14:59:41,754 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 74) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+2023-02-08 14:59:41,755 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 54) WFLYCLINF0001: Activating Infinispan subsystem.
+2023-02-08 14:59:41,756 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 55) WFLYIO001: Worker 'default' has auto-configured to 24 IO threads with 192 max task threads based on your 12 available processors
+2023-02-08 14:59:41,757 INFO  [org.wildfly.extension.metrics] (ServerService Thread Pool -- 63) WFLYMETRICS0001: Activating Base Metrics Subsystem
+2023-02-08 14:59:41,757 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 67) WFLYNAM0001: Activating Naming Subsystem
+2023-02-08 14:59:41,762 INFO  [org.jboss.remoting] (MSC service thread 1-5) JBoss Remoting version 5.0.25.Final
+2023-02-08 14:59:41,765 INFO  [org.wildfly.extension.microprofile.opentracing] (ServerService Thread Pool -- 66) WFLYTRACEXT0001: Activating MicroProfile OpenTracing Subsystem
+2023-02-08 14:59:41,770 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 44) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
+2023-02-08 14:59:41,774 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 76) WFLYWS0002: Activating WebServices Extension
+2023-02-08 14:59:41,778 INFO  [org.jboss.as.connector] (MSC service thread 1-4) WFLYJCA0009: Starting Jakarta Connectors Subsystem (WildFly/IronJacamar 1.5.3.Final)
+2023-02-08 14:59:41,780 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0018: Started Driver service with driver-name = h2
+2023-02-08 14:59:41,818 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-4) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2023-02-08 14:59:41,819 INFO  [org.jboss.as.naming] (MSC service thread 1-2) WFLYNAM0003: Starting Naming Service
+2023-02-08 14:59:41,823 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0003: Undertow 2.2.19.Final starting
+2023-02-08 14:59:41,844 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-5) WFLYELY00023: KeyStore file '/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/configuration/application.keystore' does not exist. Used blank.
+2023-02-08 14:59:41,850 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-5) WFLYELY01084: KeyStore /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self-signed certificate for host localhost
+2023-02-08 14:59:41,907 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 75) WFLYUT0014: Creating file handler for path '/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+2023-02-08 14:59:41,922 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0012: Started server default-server.
+2023-02-08 14:59:41,924 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) Queuing requests.
+2023-02-08 14:59:41,928 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0018: Host default-host starting
+2023-02-08 14:59:41,943 INFO  [org.jboss.as.ejb3] (MSC service thread 1-2) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 48 (per class), which is derived from the number of CPUs on this host.
+2023-02-08 14:59:41,942 INFO  [org.jboss.as.ejb3] (MSC service thread 1-3) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 192 (per class), which is derived from thread worker pool sizing.
+2023-02-08 14:59:41,967 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
+2023-02-08 14:59:42,078 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
+2023-02-08 14:59:42,092 INFO  [org.jboss.as.ejb3] (MSC service thread 1-3) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+2023-02-08 14:59:42,133 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2023-02-08 14:59:42,189 INFO  [org.jboss.as.patching] (MSC service thread 1-1) WFLYPAT0050: WildFly Full cumulative patch ID is: base, one-off patches include: none
+2023-02-08 14:59:42,193 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-1) WFLYDS0013: Started FileSystemDeploymentService for directory /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/deployments
+2023-02-08 14:59:42,199 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0027: Starting deployment of "helloworld.war" (runtime-name: "helloworld.war")
+2023-02-08 14:59:42,238 INFO  [org.jboss.ws.common.management] (MSC service thread 1-7) JBWS022052: Starting JBossWS 5.5.0.Final (Apache CXF 3.4.10) 
+2023-02-08 14:59:42,890 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 78) ISPN000128: Infinispan version: Infinispan 'Triskaidekaphobia' 13.0.10.Final
+2023-02-08 14:59:42,941 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 78) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.spi.marshalling.InfinispanProtoStreamMarshaller'
+2023-02-08 14:59:43,150 INFO  [org.infinispan.CONFIG] (MSC service thread 1-8) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2023-02-08 14:59:43,151 INFO  [org.infinispan.CONFIG] (MSC service thread 1-8) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2023-02-08 14:59:43,157 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 78) ISPN000025: wakeUpInterval is <= 0, not starting expired purge thread
+2023-02-08 14:59:43,159 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 78) WFLYCLINF0002: Started http-remoting-connector cache from ejb container
+2023-02-08 14:59:43,213 INFO  [stdout] (ServerService Thread Pool -- 88) Servlet initialized successfully
+2023-02-08 14:59:43,214 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 88) WFLYUT0021: Registered web context: '/helloworld' for server 'default-server'
+2023-02-08 14:59:43,250 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 45) WFLYSRV0010: Deployed "helloworld.war" (runtime-name : "helloworld.war")
+2023-02-08 14:59:43,277 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2023-02-08 14:59:43,278 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 26.1.3.Final (WildFly Core 18.1.2.Final) started in 3123ms - Started 435 of 637 services (341 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml
+2023-02-08 14:59:43,279 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2023-02-08 14:59:43,280 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2023-02-08 14:59:47,498 INFO  [stdout] (default task-1) Servlet initialized successfully
+2023-02-08 14:59:49,844 INFO  [stdout] (default task-2) Servlet initialized successfully
+2023-02-08 14:59:58,305 INFO  [stdout] (default task-3) name: sf
+2023-02-08 14:59:58,306 INFO  [stdout] (default task-3) email: fer@gmail.Com
+2023-02-08 14:59:58,306 INFO  [stdout] (default task-3) birthdate: 1222-98-98
+2023-02-08 15:08:40,948 INFO  [org.jboss.as.server] (Thread-1) WFLYSRV0272: Suspending server
+2023-02-08 15:08:40,951 INFO  [org.jboss.as.ejb3] (Thread-1) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+2023-02-08 15:08:40,953 INFO  [org.jboss.as.server] (Thread-1) WFLYSRV0220: Server shutdown has been requested via an OS signal
+2023-02-08 15:08:40,960 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-4) WFLYMAIL0002: Unbound mail session [java:jboss/mail/Default]
+2023-02-08 15:08:40,961 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 88) WFLYUT0022: Unregistered web context: '/helloworld' from server 'default-server'
+2023-02-08 15:08:40,963 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0019: Host default-host stopping
+2023-02-08 15:08:40,964 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-5) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+2023-02-08 15:08:40,965 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-5) WFLYJCA0019: Stopped Driver service with driver-name = h2
+2023-02-08 15:08:40,969 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 91) WFLYCLINF0003: Stopped http-remoting-connector cache from ejb container
+2023-02-08 15:08:40,975 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0008: Undertow HTTP listener default suspending
+2023-02-08 15:08:40,975 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0008: Undertow HTTPS listener https suspending
+2023-02-08 15:08:40,976 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8080
+2023-02-08 15:08:40,976 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 127.0.0.1:8443
+2023-02-08 15:08:40,976 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0004: Undertow 2.2.19.Final stopping
+2023-02-08 15:08:40,978 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0028: Stopped deployment helloworld.war (runtime-name: helloworld.war) in 24ms
+2023-02-08 15:08:40,983 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0050: WildFly Full 26.1.3.Final (WildFly Core 18.1.2.Final) stopped in 27ms
+2023-02-08 15:08:45,707 INFO  [org.jboss.modules] (main) JBoss Modules version 2.0.2.Final
+2023-02-08 15:08:46,014 INFO  [org.jboss.msc] (main) JBoss MSC version 1.4.13.Final
+2023-02-08 15:08:46,019 INFO  [org.jboss.threads] (main) JBoss Threads version 2.4.0.Final
+2023-02-08 15:08:46,079 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: WildFly Full 26.1.3.Final (WildFly Core 18.1.2.Final) starting
+2023-02-08 15:08:46,080 DEBUG [org.jboss.as.config] (MSC service thread 1-2) Configured system properties:
+	[Standalone] = 
+	file.encoding = UTF-8
+	file.separator = /
+	java.awt.headless = true
+	java.class.path = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/jboss-modules.jar
+	java.class.version = 63.0
+	java.home = /usr/lib/jvm/java-19-openjdk-amd64
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 19.0.1+10-Ubuntu-1ubuntu122.04
+	java.security.manager = allow
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 19
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Private Build
+	java.vendor.url = Unknown
+	java.vendor.url.bug = Unknown
+	java.version = 19.0.1
+	java.version.date = 2022-10-18
+	java.vm.compressedOopsMode = 32-bit
+	java.vm.info = mixed mode, sharing
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 19
+	java.vm.vendor = Private Build
+	java.vm.version = 19.0.1+10-Ubuntu-1ubuntu122.04
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	jboss.home.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final
+	jboss.host.name = laptop-1108
+	jboss.modules.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = laptop-1108
+	jboss.qualified.host.name = laptop-1108
+	jboss.server.base.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone
+	jboss.server.config.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/configuration
+	jboss.server.data.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/data
+	jboss.server.deploy.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/data/content
+	jboss.server.log.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/log
+	jboss.server.name = laptop-1108
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/tmp
+	jdk.debug = release
+	line.separator = 
+
+	logging.configuration = file:/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/configuration/logging.properties
+	module.path = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/modules
+	native.encoding = UTF-8
+	org.jboss.boot.log.file = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	os.arch = amd64
+	os.name = Linux
+	os.version = 5.15.0-58-generic
+	path.separator = :
+	stderr.encoding = UTF-8
+	stdout.encoding = UTF-8
+	sun.arch.data.model = 64
+	sun.boot.library.path = /usr/lib/jvm/java-19-openjdk-amd64/lib
+	sun.cpu.endian = little
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/jboss-modules.jar -mp /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/modules org.jboss.as.standalone -Djboss.home.dir=/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final -Djboss.server.base.dir=/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	user.country = FR
+	user.dir = /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth
+	user.home = /home/takima
+	user.language = fr
+	user.name = takima
+	user.timezone = Europe/Paris
+2023-02-08 15:08:46,082 DEBUG [org.jboss.as.config] (MSC service thread 1-2) VM Arguments: -D[Standalone] -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldaps=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED -Djava.security.manager=allow -Dorg.jboss.boot.log.file=/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/log/server.log -Dlogging.configuration=file:/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/configuration/logging.properties 
+2023-02-08 15:08:46,426 INFO  [org.wildfly.security] (ServerService Thread Pool -- 26) ELY00001: WildFly Elytron version 1.19.1.Final
+2023-02-08 15:08:46,756 INFO  [org.jboss.as.repository] (ServerService Thread Pool -- 2) WFLYDR0001: Content added at location /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/data/content/c7/13748add3bb42245e73a46097b2b95ba8734ed/content
+2023-02-08 15:08:46,784 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2023-02-08 15:08:46,794 INFO  [org.xnio] (MSC service thread 1-6) XNIO version 3.8.7.Final
+2023-02-08 15:08:46,800 INFO  [org.xnio.nio] (MSC service thread 1-6) XNIO NIO Implementation Version 3.8.7.Final
+2023-02-08 15:08:46,813 INFO  [org.wildfly.extension.elytron.oidc._private] (ServerService Thread Pool -- 52) WFLYOIDC0001: Activating WildFly Elytron OIDC Subsystem
+2023-02-08 15:08:46,819 INFO  [org.wildfly.extension.health] (ServerService Thread Pool -- 53) WFLYHEALTH0001: Activating Base Health Subsystem
+2023-02-08 15:08:46,821 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 56) WFLYRS0016: RESTEasy version 4.7.7.Final
+2023-02-08 15:08:46,821 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 54) WFLYCLINF0001: Activating Infinispan subsystem.
+2023-02-08 15:08:46,825 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 55) WFLYIO001: Worker 'default' has auto-configured to 24 IO threads with 192 max task threads based on your 12 available processors
+2023-02-08 15:08:46,831 INFO  [org.wildfly.extension.microprofile.config.smallrye] (ServerService Thread Pool -- 64) WFLYCONF0001: Activating MicroProfile Config Subsystem
+2023-02-08 15:08:46,837 INFO  [org.jboss.as.connector] (MSC service thread 1-4) WFLYJCA0009: Starting Jakarta Connectors Subsystem (WildFly/IronJacamar 1.5.3.Final)
+2023-02-08 15:08:46,837 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 67) WFLYNAM0001: Activating Naming Subsystem
+2023-02-08 15:08:46,838 INFO  [org.wildfly.extension.microprofile.opentracing] (ServerService Thread Pool -- 66) WFLYTRACEXT0001: Activating MicroProfile OpenTracing Subsystem
+2023-02-08 15:08:46,841 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 74) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+2023-02-08 15:08:46,843 INFO  [org.wildfly.extension.microprofile.jwt.smallrye] (ServerService Thread Pool -- 65) WFLYJWT0001: Activating MicroProfile JWT Subsystem
+2023-02-08 15:08:46,847 INFO  [org.wildfly.extension.metrics] (ServerService Thread Pool -- 63) WFLYMETRICS0001: Activating Base Metrics Subsystem
+2023-02-08 15:08:46,847 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 44) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
+2023-02-08 15:08:46,851 INFO  [org.jboss.remoting] (MSC service thread 1-8) JBoss Remoting version 5.0.25.Final
+2023-02-08 15:08:46,852 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-5) WFLYJCA0018: Started Driver service with driver-name = h2
+2023-02-08 15:08:46,852 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 76) WFLYWS0002: Activating WebServices Extension
+2023-02-08 15:08:46,861 INFO  [org.jboss.as.naming] (MSC service thread 1-6) WFLYNAM0003: Starting Naming Service
+2023-02-08 15:08:46,861 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-1) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2023-02-08 15:08:46,861 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 61) WFLYJSF0007: Activated the following Jakarta Server Faces Implementations: [main]
+2023-02-08 15:08:46,894 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0003: Undertow 2.2.19.Final starting
+2023-02-08 15:08:46,917 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-3) WFLYELY00023: KeyStore file '/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/configuration/application.keystore' does not exist. Used blank.
+2023-02-08 15:08:46,937 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-1) WFLYELY01084: KeyStore /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self-signed certificate for host localhost
+2023-02-08 15:08:46,939 INFO  [org.jboss.as.ejb3] (MSC service thread 1-6) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 192 (per class), which is derived from thread worker pool sizing.
+2023-02-08 15:08:46,939 INFO  [org.jboss.as.ejb3] (MSC service thread 1-4) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 48 (per class), which is derived from the number of CPUs on this host.
+2023-02-08 15:08:46,941 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 75) WFLYUT0014: Creating file handler for path '/home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+2023-02-08 15:08:46,947 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0012: Started server default-server.
+2023-02-08 15:08:46,948 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) Queuing requests.
+2023-02-08 15:08:46,948 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0018: Host default-host starting
+2023-02-08 15:08:46,998 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
+2023-02-08 15:08:47,022 INFO  [org.jboss.as.ejb3] (MSC service thread 1-1) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+2023-02-08 15:08:47,057 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-6) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2023-02-08 15:08:47,059 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
+2023-02-08 15:08:47,157 INFO  [org.jboss.as.patching] (MSC service thread 1-6) WFLYPAT0050: WildFly Full cumulative patch ID is: base, one-off patches include: none
+2023-02-08 15:08:47,159 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-1) WFLYDS0013: Started FileSystemDeploymentService for directory /home/takima/Documents/MoodOfTheMonth/MoodOfTheMonth/wildfly-26.1.3.Final/standalone/deployments
+2023-02-08 15:08:47,164 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) WFLYSRV0027: Starting deployment of "helloworld.war" (runtime-name: "helloworld.war")
+2023-02-08 15:08:47,202 INFO  [org.jboss.ws.common.management] (MSC service thread 1-2) JBWS022052: Starting JBossWS 5.5.0.Final (Apache CXF 3.4.10) 
+2023-02-08 15:08:47,678 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 78) ISPN000128: Infinispan version: Infinispan 'Triskaidekaphobia' 13.0.10.Final
+2023-02-08 15:08:47,726 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 78) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.spi.marshalling.InfinispanProtoStreamMarshaller'
+2023-02-08 15:08:47,936 INFO  [org.infinispan.CONFIG] (MSC service thread 1-7) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2023-02-08 15:08:47,937 INFO  [org.infinispan.CONFIG] (MSC service thread 1-7) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2023-02-08 15:08:47,944 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 78) ISPN000025: wakeUpInterval is <= 0, not starting expired purge thread
+2023-02-08 15:08:47,946 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 78) WFLYCLINF0002: Started http-remoting-connector cache from ejb container
+2023-02-08 15:08:47,998 INFO  [stdout] (ServerService Thread Pool -- 88) Servlet initialized successfully
+2023-02-08 15:08:47,998 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 88) WFLYUT0021: Registered web context: '/helloworld' for server 'default-server'
+2023-02-08 15:08:48,046 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 45) WFLYSRV0010: Deployed "helloworld.war" (runtime-name : "helloworld.war")
+2023-02-08 15:08:48,074 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2023-02-08 15:08:48,076 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 26.1.3.Final (WildFly Core 18.1.2.Final) started in 2581ms - Started 435 of 637 services (341 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml
+2023-02-08 15:08:48,077 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2023-02-08 15:08:48,077 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2023-02-08 15:09:05,862 INFO  [stdout] (default task-1) Servlet initialized successfully
+2023-02-08 15:09:08,466 ERROR [io.undertow.request] (default task-3) UT005023: Exception handling request to /helloworld/addUser: javax.servlet.ServletException: UT010013: Could not instantiate Controller.Employees.AddUserController
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:306)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.core.ManagedServlet.forceInit(ManagedServlet.java:212)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletChain.forceInit(ServletChain.java:130)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:63)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at org.wildfly.security.elytron-web.undertow-server@1.10.1.Final//org.wildfly.elytron.web.undertow.server.ElytronRunAsHandler.lambda$handleRequest$1(ElytronRunAsHandler.java:68)
+	at org.wildfly.security.elytron-base@1.19.1.Final//org.wildfly.security.auth.server.FlexibleIdentityAssociation.runAsFunctionEx(FlexibleIdentityAssociation.java:103)
+	at org.wildfly.security.elytron-base@1.19.1.Final//org.wildfly.security.auth.server.Scoped.runAsFunctionEx(Scoped.java:161)
+	at org.wildfly.security.elytron-base@1.19.1.Final//org.wildfly.security.auth.server.Scoped.runAs(Scoped.java:73)
+	at org.wildfly.security.elytron-web.undertow-server@1.10.1.Final//org.wildfly.elytron.web.undertow.server.ElytronRunAsHandler.handleRequest(ElytronRunAsHandler.java:67)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.core@2.2.19.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.core@2.2.19.Final//io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.core@2.2.19.Final//io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at org.wildfly.security.elytron-web.undertow-server-servlet@1.10.1.Final//org.wildfly.elytron.web.undertow.server.servlet.CleanUpHandler.handleRequest(CleanUpHandler.java:38)
+	at io.undertow.core@2.2.19.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:61)
+	at io.undertow.core@2.2.19.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.deployment.GlobalRequestControllerHandler.handleRequest(GlobalRequestControllerHandler.java:68)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.core@2.2.19.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:275)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:79)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:134)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:131)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1544)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1544)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1544)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1544)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:255)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:79)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:100)
+	at io.undertow.core@2.2.19.Final//io.undertow.server.Connectors.executeRootHandler(Connectors.java:387)
+	at io.undertow.core@2.2.19.Final//io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:852)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+	at org.jboss.xnio@3.8.7.Final//org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: java.lang.IllegalStateException: WFLYEE0042: Failed to construct component instance
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.BasicComponent.constructComponentInstance(BasicComponent.java:170)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.BasicComponent.constructComponentInstance(BasicComponent.java:141)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.BasicComponent.createInstance(BasicComponent.java:88)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.ComponentRegistry$ComponentManagedReferenceFactory.getReference(ComponentRegistry.java:163)
+	at org.wildfly.extension.undertow@26.1.3.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$6.createInstance(UndertowDeploymentInfoService.java:1239)
+	at io.undertow.servlet@2.2.19.Final//io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:304)
+	... 44 more
+Caused by: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.ConstructorComponentFactory.create(ConstructorComponentFactory.java:27)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.ComponentInstantiatorInterceptor.processInvocation(ComponentInstantiatorInterceptor.java:67)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.ChainedInterceptor.processInvocation(ChainedInterceptor.java:53)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.AroundConstructInterceptorFactory$1.processInvocation(AroundConstructInterceptorFactory.java:26)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.concurrent.ConcurrentContextInterceptor.processInvocation(ConcurrentContextInterceptor.java:45)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.ContextClassLoaderInterceptor.processInvocation(ContextClassLoaderInterceptor.java:60)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+	at org.jboss.invocation@1.7.0.Final//org.jboss.invocation.ChainedInterceptor.processInvocation(ChainedInterceptor.java:53)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.BasicComponent.constructComponentInstance(BasicComponent.java:168)
+	... 49 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:79)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.jboss.as.ee@26.1.3.Final//org.jboss.as.ee.component.ConstructorComponentFactory.create(ConstructorComponentFactory.java:24)
+	... 60 more
+Caused by: java.lang.RuntimeException: java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:5432/employees
+	at deployment.helloworld.war//DAO.EmployeesDAO.<init>(EmployeesDAO.java:37)
+	at deployment.helloworld.war//Service.EmployeeService.<init>(EmployeeService.java:13)
+	at deployment.helloworld.war//Controller.Employees.AddUserController.<init>(AddUserController.java:37)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	... 63 more
+Caused by: java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:5432/employees
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:708)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at deployment.helloworld.war//DAO.EmployeesDAO.<init>(EmployeesDAO.java:35)
+	... 66 more
+
+2023-02-08 15:15:23,830 INFO  [org.jboss.as.server] (Thread-1) WFLYSRV0272: Suspending server
+2023-02-08 15:15:23,834 INFO  [org.jboss.as.ejb3] (Thread-1) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+2023-02-08 15:15:23,839 INFO  [org.jboss.as.server] (Thread-1) WFLYSRV0220: Server shutdown has been requested via an OS signal
+2023-02-08 15:15:23,864 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-2) WFLYMAIL0002: Unbound mail session [java:jboss/mail/Default]
+2023-02-08 15:15:23,866 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 88) WFLYUT0022: Unregistered web context: '/helloworld' from server 'default-server'
+2023-02-08 15:15:23,870 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0019: Host default-host stopping
+2023-02-08 15:15:23,873 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-7) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+2023-02-08 15:15:23,875 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-5) WFLYJCA0019: Stopped Driver service with driver-name = h2
+2023-02-08 15:15:23,881 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 93) WFLYCLINF0003: Stopped http-remoting-connector cache from ejb container
+2023-02-08 15:15:23,889 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0008: Undertow HTTPS listener https suspending
+2023-02-08 15:15:23,889 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0008: Undertow HTTP listener default suspending
+2023-02-08 15:15:23,889 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 127.0.0.1:8443
+2023-02-08 15:15:23,889 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8080
+2023-02-08 15:15:23,890 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0004: Undertow 2.2.19.Final stopping
+2023-02-08 15:15:23,892 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0028: Stopped deployment helloworld.war (runtime-name: helloworld.war) in 50ms
+2023-02-08 15:15:23,895 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0050: WildFly Full 26.1.3.Final (WildFly Core 18.1.2.Final) stopped in 47ms
