@@ -1,4 +1,4 @@
-/*
+package Controller;/*
  * JBoss, Home of Professional Open Source
  * Copyright 2015, Red Hat, Inc. and/or its affiliates, and individual
  * contributors by the @authors tag. See the copyright.txt in the
@@ -15,6 +15,8 @@
  * limitations under the License.
  */
 
+import Service.EmployeeService;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,17 +30,6 @@ import java.text.ParseException;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
-/**
- * <p>
- * A simple servlet taking advantage of features added in 3.0.
- * </p>
- *
- * <p>
- * The servlet is registered and mapped to /HelloServlet using the {@linkplain WebServlet
- * @HttpServlet}. The {@link HelloService} is injected by CDI.
- * </p>
- *
- */
 @WebServlet("/addUser")
 public class AddUserController extends HttpServlet {
 
@@ -67,7 +58,7 @@ public class AddUserController extends HttpServlet {
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
         try {
             Date date = format.parse(birthdate);
-            //appel de la méthode addEmployees de la classe EmployeeService
+            //appel de la méthode addEmployees de la classe Service.EmployeeService
             employeeService.addEmployees(name, email, date);
         } catch (ParseException e) {
             throw new RuntimeException(e);
