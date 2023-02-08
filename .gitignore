@@ -2,3 +2,6 @@
 
 tom/
 out/
+wildfly-26.1.3.Final/standalone/dtmp/vfs
+wildfly-26.1.3.Final/standalone/data
+wildfly-26.1.3.Final/standalone/log
