@@ -1,27 +1,27 @@
 import java.sql.SQLException;
 import java.util.Date;
 
-public class UserService {
+public class EmployeeService {
 
-    private UserDAO userDAO;
+    private EmployeesDAO employeesDAO;
 
-    public UserService(UserDAO userDAO) {
-        this.userDAO = userDAO;
+    public EmployeeService() {
+        this.employeesDAO = employeesDAO;
     }
 
-    public void addUser(String name, String email, Date birthDate) throws SQLException {
-        userDAO.addUser(name, email, birthDate);
+    public void addEmployees(String name, String email, Date birthDate) throws SQLException {
+        employeesDAO.addEmployees(name, email, birthDate);
     }
 
-    public User getUser(int id) throws SQLException {
-        return userDAO.getUser(id);
+    public Employees getEmployees(int id) throws SQLException {
+        return employeesDAO.getEmployees(id);
     }
 
-    public void updateUser(User user) throws SQLException {
-        userDAO.updateUser(user);
+    public void updateEmployees(Employees employees) throws SQLException {
+        employeesDAO.updateEmployees(employees);
     }
 
-    public void deleteUser(int id) throws SQLException {
-        userDAO.deleteUser(id);
+    public void deleteEmployees(int id) throws SQLException {
+        employeesDAO.deleteEmployees(id);
     }
 }

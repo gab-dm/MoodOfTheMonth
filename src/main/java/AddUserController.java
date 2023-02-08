@@ -23,6 +23,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.text.ParseException;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 
 /**
  * <p>
@@ -37,6 +41,8 @@ import java.io.PrintWriter;
  */
 @WebServlet("/addUser")
 public class AddUserController extends HttpServlet {
+
+    EmployeeService employeeService = new EmployeeService();
 
     @Override
     public void init() {
@@ -58,12 +64,21 @@ public class AddUserController extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String birthdate = request.getParameter("date");
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            Date date = format.parse(birthdate);
+            //appel de la méthode addEmployees de la classe EmployeeService
+            employeeService.addEmployees(name, email, date);
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
 
         System.out.println("name: " + name);
         System.out.println("email: " + email);
         System.out.println("birthdate: " + birthdate);
-
-        // do some processing here...
 
         // get response writer
         PrintWriter writer = response.getWriter();
