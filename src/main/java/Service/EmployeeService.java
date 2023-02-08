@@ -5,7 +5,7 @@ import Model.Employees;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 
 public class EmployeeService {
 

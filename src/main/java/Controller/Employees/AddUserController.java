@@ -28,9 +28,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.text.ParseException;
-import java.util.Date;
+//import java.util.Date;
+//import java.text.SimpleDateFormat;
+import java.sql.Date;
 import java.text.SimpleDateFormat;
-
 @WebServlet("/addUser")
 public class AddUserController extends HttpServlet {
 
@@ -56,14 +57,14 @@ public class AddUserController extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String birthdate = request.getParameter("date");
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
+//        SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
         try {
-            Date date = format.parse(birthdate);
+//            Date date = format.parse(birthdate);
+            Date date = Date.valueOf(birthdate);
             //appel de la méthode addEmployees de la classe Service.EmployeeService
             employeeService.addEmployees(name, email, date);
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
         } catch (SQLException e) {
+            System.out.println("SQL Exception");
             throw new RuntimeException(e);
         }
 

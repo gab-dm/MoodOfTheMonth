@@ -5,22 +5,26 @@ import Model.Employees;
 import java.sql.*;
 //import java.sql.Date;
 import java.util.ArrayList;
-import java.util.Date;
-import java.text.SimpleDateFormat;
-import java.sql.*;
+
 
 public class EmployeesDAO {
 
     private static ArrayList<Employees> employees = new ArrayList<Employees>();
+
     private final Connection connection;
 
     public EmployeesDAO() {
-        String url = "jdbc:postgresql://localhost:5432/employees";
+        String url = "jdbc:postgresql://localhost:5432/postgres";
         String password = "mypassword";
         String username = "myusername";
-        PreparedStatement statement = null;
+
         try {
+            Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(url, username, password);
+
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -32,7 +36,7 @@ public class EmployeesDAO {
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, name);
             statement.setString(2, email);
-            statement.setDate(3, (java.sql.Date) birthDate);
+            statement.setDate(3, birthDate);
             statement.executeUpdate();
         }
     }
