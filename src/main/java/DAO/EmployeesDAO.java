@@ -2,18 +2,26 @@ package DAO;
 
 import Model.Employees;
 
-import java.sql.Connection;
+import java.sql.*;
 //import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
 public class EmployeesDAO {
+private String url = "jdbc:postgresql://localhost:4532/employees";
+private String password = "mypassword";
+private String username = "myusername";
+    private final Connection connection;
 
-    //private final Connection connection;
+    {
+        try {
+            connection = DriverManager.getConnection(url, username, password);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     private static ArrayList<Employees> employees = new ArrayList<Employees>();
 
     public EmployeesDAO(Connection connection) {
@@ -26,13 +34,13 @@ public class EmployeesDAO {
 
     public void addEmployees(String name, String email, Date birthDate) throws SQLException {
         employees.add(new Employees(name, email, birthDate));
-//        String sql = "INSERT INTO employees (name, email, birth_date) VALUES (?, ?, ?)";
-//        try (PreparedStatement statement = connection.prepareStatement(sql)) {
-//            statement.setString(1, name);
-//            statement.setString(2, email);
-//            statement.setDate(3, (java.sql.Date) birthDate);
-//            statement.executeUpdate();
-//        }
+        String sql = "INSERT INTO employees (name, email, birth_date) VALUES (?, ?, ?)";
+        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setString(1, name);
+            statement.setString(2, email);
+            statement.setDate(3, (java.sql.Date) birthDate);
+            statement.executeUpdate();
+        }
     }
     public static ArrayList<Employees> getListOfEmployees() {
         return employees;
