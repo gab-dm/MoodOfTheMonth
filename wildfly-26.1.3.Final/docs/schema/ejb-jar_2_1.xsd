@@ -611,7 +611,7 @@
 
 	  Example:
 
-	  <ejb-name>Service.EmployeeService</ejb-name>
+	  <ejb-name>EmployeeService</ejb-name>
 
 	  ]]>
       </xsd:documentation>
@@ -1613,29 +1613,29 @@
 	  Examples:
 
 	  Style 1: The following method element refers to all the
-	  methods of the Service.EmployeeService bean's home, component,
+	  methods of the EmployeeService bean's home, component,
 	  and/or web service endpoint interfaces:
 
 	  <method>
-	      <ejb-name>Service.EmployeeService</ejb-name>
+	      <ejb-name>EmployeeService</ejb-name>
 	      <method-name>*</method-name>
 	  </method>
 
 	  Style 2: The following method element refers to all the
-	  create methods of the Service.EmployeeService bean's home
+	  create methods of the EmployeeService bean's home
 	  interface(s).
 
 	  <method>
-	      <ejb-name>Service.EmployeeService</ejb-name>
+	      <ejb-name>EmployeeService</ejb-name>
 	      <method-name>create</method-name>
 	  </method>
 
 	  Style 3: The following method element refers to the
 	  create(String firstName, String LastName) method of the
-	  Service.EmployeeService bean's home interface(s).
+	  EmployeeService bean's home interface(s).
 
 	  <method>
-	      <ejb-name>Service.EmployeeService</ejb-name>
+	      <ejb-name>EmployeeService</ejb-name>
 	      <method-name>create</method-name>
 	      <method-params>
 		  <method-param>java.lang.String</method-param>
@@ -1649,7 +1649,7 @@
 	  mypackage.MyClass[][] myclaar) would be specified as:
 
 	  <method>
-	      <ejb-name>Service.EmployeeService</ejb-name>
+	      <ejb-name>EmployeeService</ejb-name>
 	      <method-name>foobar</method-name>
 	      <method-params>
 		  <method-param>char</method-param>
@@ -1669,7 +1669,7 @@
 	  For example, the method element
 
 	  <method>
-	      <ejb-name>Service.EmployeeService</ejb-name>
+	      <ejb-name>EmployeeService</ejb-name>
 	      <method-intf>Remote</method-intf>
 	      <method-name>create</method-name>
 	      <method-params>
@@ -1684,7 +1684,7 @@
 	  interface, which would be defined as
 
 	  <method>
-	      <ejb-name>Service.EmployeeService</ejb-name>
+	      <ejb-name>EmployeeService</ejb-name>
 	      <method-intf>Home</method-intf>
 	      <method-name>create</method-name>
 	      <method-params>
@@ -1697,7 +1697,7 @@
 	  interface which would be defined as
 
 	  <method>
-	      <ejb-name>Service.EmployeeService</ejb-name>
+	      <ejb-name>EmployeeService</ejb-name>
 	      <method-intf>LocalHome</method-intf>
 	      <method-name>create</method-name>
 	      <method-params>
@@ -1709,10 +1709,10 @@
 	  The method-intf element can be used with all th ree Styles
 	  of the method element usage. For example, the following
 	  method element example could be used to refer to all the
-	  methods of the Service.EmployeeService bean's remote home interface.
+	  methods of the EmployeeService bean's remote home interface.
 
 	  <method>
-	      <ejb-name>Service.EmployeeService</ejb-name>
+	      <ejb-name>EmployeeService</ejb-name>
 	      <method-intf>Home</method-intf>
 	      <method-name>*</method-name>
 	  </method>
