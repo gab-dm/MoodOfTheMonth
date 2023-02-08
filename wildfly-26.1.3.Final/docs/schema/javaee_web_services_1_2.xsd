@@ -251,7 +251,7 @@
 	      Used in: port-component
 
 	      Example:
-		      <port-component-name>EmployeeService
+		      <port-component-name>Service.EmployeeService
 		      </port-component-name>
 
 	      ]]>
@@ -715,7 +715,7 @@
 		Used in: port-component
 
 		Example:
-			<port-component-name>EmployeeService
+			<port-component-name>Service.EmployeeService
 			</port-component-name>
 
 		]]>

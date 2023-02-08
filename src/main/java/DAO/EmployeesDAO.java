@@ -1,3 +1,7 @@
+package DAO;
+
+import Model.Employees;
+
 import java.sql.Connection;
 //import java.sql.Date;
 import java.sql.PreparedStatement;

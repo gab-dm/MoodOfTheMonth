@@ -715,7 +715,7 @@ xpath=".//javaee:ejb-relationship-role/javaee:relationship-role-source"/>
 
 	  Example:
 
-	  <ejb-name>EmployeeService</ejb-name>
+	  <ejb-name>Service.EmployeeService</ejb-name>
 
 	  ]]>
       </xsd:documentation>
@@ -1996,29 +1996,29 @@ xpath=".//javaee:ejb-relationship-role/javaee:relationship-role-source"/>
 	  Examples:
 
 	  Style 1: The following method element refers to all the
-	  methods of the EmployeeService bean's business, home,
+	  methods of the Service.EmployeeService bean's business, home,
           component, and/or web service endpoint interfaces:
 
 	  <method>
-	      <ejb-name>EmployeeService</ejb-name>
+	      <ejb-name>Service.EmployeeService</ejb-name>
 	      <method-name>*</method-name>
 	  </method>
 
 	  Style 2: The following method element refers to all the
-	  create methods of the EmployeeService bean's home
+	  create methods of the Service.EmployeeService bean's home
 	  interface(s).
 
 	  <method>
-	      <ejb-name>EmployeeService</ejb-name>
+	      <ejb-name>Service.EmployeeService</ejb-name>
 	      <method-name>create</method-name>
 	  </method>
 
 	  Style 3: The following method element refers to the
 	  create(String firstName, String LastName) method of the
-	  EmployeeService bean's home interface(s).
+	  Service.EmployeeService bean's home interface(s).
 
 	  <method>
-	      <ejb-name>EmployeeService</ejb-name>
+	      <ejb-name>Service.EmployeeService</ejb-name>
 	      <method-name>create</method-name>
 	      <method-params>
 		  <method-param>java.lang.String</method-param>
@@ -2032,7 +2032,7 @@ xpath=".//javaee:ejb-relationship-role/javaee:relationship-role-source"/>
 	  mypackage.MyClass[][] myclaar) would be specified as:
 
 	  <method>
-	      <ejb-name>EmployeeService</ejb-name>
+	      <ejb-name>Service.EmployeeService</ejb-name>
 	      <method-name>foobar</method-name>
 	      <method-params>
 		  <method-param>char</method-param>
@@ -2057,7 +2057,7 @@ xpath=".//javaee:ejb-relationship-role/javaee:relationship-role-source"/>
 	  For example, the method element
 
 	  <method>
-	      <ejb-name>EmployeeService</ejb-name>
+	      <ejb-name>Service.EmployeeService</ejb-name>
 	      <method-intf>Remote</method-intf>
 	      <method-name>create</method-name>
 	      <method-params>
@@ -2072,7 +2072,7 @@ xpath=".//javaee:ejb-relationship-role/javaee:relationship-role-source"/>
 	  interface, which would be defined as
 
 	  <method>
-	      <ejb-name>EmployeeService</ejb-name>
+	      <ejb-name>Service.EmployeeService</ejb-name>
 	      <method-intf>Home</method-intf>
 	      <method-name>create</method-name>
 	      <method-params>
@@ -2085,7 +2085,7 @@ xpath=".//javaee:ejb-relationship-role/javaee:relationship-role-source"/>
 	  interface which would be defined as
 
 	  <method>
-	      <ejb-name>EmployeeService</ejb-name>
+	      <ejb-name>Service.EmployeeService</ejb-name>
 	      <method-intf>LocalHome</method-intf>
 	      <method-name>create</method-name>
 	      <method-params>
@@ -2097,11 +2097,11 @@ xpath=".//javaee:ejb-relationship-role/javaee:relationship-role-source"/>
 	  The method-intf element can be used with all three Styles
 	  of the method element usage. For example, the following
 	  method element example could be used to refer to all the
-	  methods of the EmployeeService bean's remote home interface
+	  methods of the Service.EmployeeService bean's remote home interface
           and the remote business interface.
 
 	  <method>
-	      <ejb-name>EmployeeService</ejb-name>
+	      <ejb-name>Service.EmployeeService</ejb-name>
 	      <method-intf>Home</method-intf>
 	      <method-name>*</method-name>
 	  </method>
