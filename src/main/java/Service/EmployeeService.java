@@ -11,7 +11,7 @@ public class EmployeeService {
     private EmployeesDAO employeesDAO;
 
     public EmployeeService() {
-        this.employeesDAO = employeesDAO;
+        //this.employeesDAO = employeesDAO;
     }
 
     public void addEmployees(String name, String email, Date birthDate) throws SQLException {

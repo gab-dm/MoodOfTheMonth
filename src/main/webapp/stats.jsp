@@ -4,10 +4,10 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>JSP - Hello World Tutorial - Programmer Gate</title>
+    <title>Stats</title>
 </head>
 <body>
-<%@include  file="resources/pages/stats.html" %>
+    <%@include  file="resources/pages/stats.html" %>
 
 </body>
 </html>

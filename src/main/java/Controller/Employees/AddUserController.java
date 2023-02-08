@@ -59,10 +59,8 @@ public class AddUserController extends HttpServlet {
         try {
             Date date = format.parse(birthdate);
             //appel de la méthode addEmployees de la classe Service.EmployeeService
-            employeeService.addEmployees(name, email, date);
+            //employeeService.addEmployees(name, email, date);
         } catch (ParseException e) {
-            throw new RuntimeException(e);
-        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
@@ -78,7 +76,9 @@ public class AddUserController extends HttpServlet {
         String htmlResponse = "<html>";
         htmlResponse += "<h2>Your name is: " + name + "<br/>";
         htmlResponse += "Your email is: " + email + "<br/>";
-        htmlResponse += "Your birthdate: " + birthdate + "</h2>";
+        htmlResponse += "Your birthdate: " + birthdate + "<br/>";
+        htmlResponse += "<button onclick=\"location.href = '/helloworld/adminPanel';\" type=\"submit\" class=\"btn btn-lg btn-primary\">Back to panel</button>";
+        htmlResponse += "</h2>";
         htmlResponse += "</html>";
 
         // return response

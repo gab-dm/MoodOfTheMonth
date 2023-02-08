@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>JSP - Hello World Tutorial - Programmer Gate</title>
+    <title>Add member</title>
 </head>
 <body>
     <%@include  file="resources/pages/add_member.html" %>
