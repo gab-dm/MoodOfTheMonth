@@ -2,17 +2,31 @@ package DAO;
 
 import Model.Employees;
 
-import java.sql.*;
+
 //import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Date;
 import java.text.SimpleDateFormat;
+import java.sql.*;
 
 public class EmployeesDAO {
-private String url = "jdbc:postgresql://localhost:4532/employees";
-private String password = "mypassword";
-private String username = "myusername";
+
+    String url = "jdbc:postgresql://localhost:5432/takistaff";
+    String username = "takistaff";
+    String password = "takistaff";
+
+
     private final Connection connection;
+
+    {
+    try {
+        Class.forName("org.postgresql.Driver");
+      } catch (ClassNotFoundException e) {
+        System.out.println("PostgreSQL JDBC Driver not found.");
+        e.printStackTrace();
+      }
+    }
+
 
     {
         try {
