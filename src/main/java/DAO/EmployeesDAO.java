@@ -19,7 +19,7 @@ public class EmployeesDAO {
     }
 
     public void addEmployees(String name, String email, Date birthDate) throws SQLException {
-        String sql = "INSERT INTO users (name, email, birth_date) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO employees (name, email, birth_date) VALUES (?, ?, ?)";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, name);
             statement.setString(2, email);
