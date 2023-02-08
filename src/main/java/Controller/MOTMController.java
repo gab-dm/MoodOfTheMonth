@@ -1,5 +1,7 @@
 package Controller;
 
+import Service.MoodService;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,9 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 
 @WebServlet("motm")
 public class MOTMController extends HttpServlet {
+
+    MoodService moodService = new MoodService();
 
     @Override
     public void init() {
@@ -31,11 +36,20 @@ public class MOTMController extends HttpServlet {
         String note = req.getParameter("note");
         String comment = req.getParameter("content");
         String checkbox = req.getParameter("public");
+        String publicly = "no";
+        if (checkbox != null) {
+            publicly = "yes";
+        }
 
+        try {
+            moodService.addMood(note, comment, publicly);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
         System.out.println("note: " + note);
         System.out.println("comment: " + comment);
-        System.out.println("Public: " + checkbox);
+        System.out.println("Public: " + publicly);
 
         // do some processing here...
 

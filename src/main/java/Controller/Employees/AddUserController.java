@@ -36,6 +36,7 @@ import java.text.SimpleDateFormat;
 public class AddUserController extends HttpServlet {
 
     EmployeeService employeeService = new EmployeeService();
+    EmployeesDAO employeesDAO = new EmployeesDAO();
 
     @Override
     public void init() {
@@ -81,7 +82,7 @@ public class AddUserController extends HttpServlet {
         htmlResponse += "<h2>Your name is: " + name + "<br/>";
         htmlResponse += "Your email is: " + email + "<br/>";
         htmlResponse += "Your birthdate: " + birthdate + "<br/>";
-        htmlResponse += "There is now " + EmployeesDAO.getListOfEmployees().size() + " users<br/>";
+        htmlResponse += "There is now " + employeesDAO.getNumberOfEmployees() + " users<br/>";
         htmlResponse += "<button onclick=\"location.href = '/helloworld/adminPanel';\" type=\"submit\" class=\"btn btn-lg btn-primary\">Back to panel</button>";
         htmlResponse += "</h2>";
         htmlResponse += "</html>";
