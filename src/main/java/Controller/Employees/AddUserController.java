@@ -15,6 +15,7 @@ package Controller.Employees;/*
  * limitations under the License.
  */
 
+import DAO.EmployeesDAO;
 import Service.EmployeeService;
 
 import javax.servlet.RequestDispatcher;
@@ -55,7 +56,7 @@ public class AddUserController extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String birthdate = request.getParameter("date");
-        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
         try {
             Date date = format.parse(birthdate);
             //appel de la méthode addEmployees de la classe Service.EmployeeService
@@ -79,7 +80,7 @@ public class AddUserController extends HttpServlet {
         htmlResponse += "<h2>Your name is: " + name + "<br/>";
         htmlResponse += "Your email is: " + email + "<br/>";
         htmlResponse += "Your birthdate: " + birthdate + "<br/>";
-        htmlResponse += "There is now " + EmployeeService.getListOfEmployees().size() + " users<br/>";
+        htmlResponse += "There is now " + EmployeesDAO.getListOfEmployees().size() + " users<br/>";
         htmlResponse += "<button onclick=\"location.href = '/helloworld/adminPanel';\" type=\"submit\" class=\"btn btn-lg btn-primary\">Back to panel</button>";
         htmlResponse += "</h2>";
         htmlResponse += "</html>";
