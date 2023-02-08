@@ -13,7 +13,7 @@ CREATE TABLE moods (
 );
 
 INSERT INTO employees (name, email, birthdate) VALUES ('Tom Kauffmann', 'tkauffmann@takima.fr', '23-04-1999');
-INSERT INTO employees (name, email, birthdate) VALUES ('Steven Tien', 'stien@takima.fr', '05-08-1999');
-INSERT INTO employees (name, email, birthdate) VALUES ('Gabriel Demontcheuil', 'gdemontcheuil@takima.fr', '19-02-1999');
+INSERT INTO employees (name, email, birthdate) VALUES ('Steven Tien', 'stien@takima.fr', '23-10-1999');
+INSERT INTO employees (name, email, birthdate) VALUES ('Gabriel de Montcheuil', 'gdemontcheuil@takima.fr', '19-02-1998');
 
-INSERT INTO moods (mark, name, comment) VALUES (1, 'Gabriel Demontcheuil', 'ceci est un test de commentaire random : hibernate on te deteste');
+INSERT INTO moods (mark, name, comment) VALUES (1, 'Gabriel de Montcheuil', 'ceci est un test de commentaire random : hibernate on te déteste');

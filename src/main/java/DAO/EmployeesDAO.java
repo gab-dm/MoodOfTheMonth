@@ -61,11 +61,11 @@ public class EmployeesDAO {
 //    }
 
 //    public void updateEmployees(Employees employees) throws SQLException {
-//        String sql = "UPDATE users SET name = ?, email = ?, birth_date = ? WHERE id = ?";
+//        String sql = "UPDATE employees SET name = ?, email = ?, birth_date = ? WHERE id = ?";
 //        try (PreparedStatement statement = connection.prepareStatement(sql)) {
 //            statement.setString(1, employees.getNameEmployee());
 //            statement.setString(2, employees.getEmailEmployee());
-//            statement.setDate(3, (java.sql.Date) employees.getBirthDateEmployee());
+//            statement.setDate(3, employees.getBirthDateEmployee());
 //            statement.setInt(4, employees.getUuidEmployee());
 //            statement.executeUpdate();
 //        }

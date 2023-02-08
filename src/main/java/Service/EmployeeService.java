@@ -27,9 +27,9 @@ public class EmployeeService {
 //        return employeesDAO.getEmployees(id);
 //    }
 //
-//    public void updateEmployees(Employees employees) throws SQLException {
-//        employeesDAO.updateEmployees(employees);
-//    }
+    public void updateEmployees(Employees employees) throws SQLException {
+        employeesDAO.updateEmployees(employees);
+    }
 //
 //    public void deleteEmployees(int id) throws SQLException {
 //        employeesDAO.deleteEmployees(id);
