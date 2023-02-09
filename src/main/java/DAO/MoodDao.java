@@ -46,4 +46,21 @@ public class MoodDao {
             throw new RuntimeException(e);
         }
     }
+    public Integer getNumberOfMoods() {
+        String sql = "SELECT COUNT(*) AS count FROM moods";
+        PreparedStatement ps = null;
+        try {
+            ps = connection.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            int count = rs.getInt("count");
+            rs.close();
+            return count;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    
+
+
 }

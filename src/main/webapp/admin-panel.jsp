@@ -11,7 +11,9 @@
 
 <%  
     EmployeesDAO employeesDAO = new EmployeesDAO();
+    MoodDao moodDao = new MoodDao();
     Integer count = employeesDAO.getNumberOfEmployees(); 
+    Integer count_moods = moodDao.getNumberOfMoods(); 
     Integer nb_pages = (count-1)/10 + 1;
 
     ArrayList<Employees> employees = EmployeesDAO.getListOfEmployees();
@@ -120,7 +122,7 @@
                                 <i class="fa fa-smile-o fa-5x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge">3</div>
+                                <div class="huge"><%=count_moods%></div>
                                 <div class="huge-label">Moods Closed</div>
                             </div>
                         </div>
@@ -232,7 +234,7 @@
                         <i class="fa fa-tachometer fa-fw"></i> Stats
                     </div>
                     <div class="panel-body" id="stats">
-                        <%  MoodDao moodDao = new MoodDao();
+                        <%  
                             ArrayList<Mood> moods = new ArrayList<Mood>();
                             ResultSet moodRs = moodDao.getMood();
                             while (moodRs.next()) {
