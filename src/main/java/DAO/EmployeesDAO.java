@@ -60,7 +60,7 @@ public class EmployeesDAO {
     }
 
     public ResultSet getEmployees() {
-        String sql = "SELECT * FROM employees LIMIT 10";
+        String sql = "SELECT * FROM employees";
         PreparedStatement ps = null;
         try {
             ps = connection.prepareStatement(sql);
