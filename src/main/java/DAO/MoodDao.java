@@ -34,4 +34,16 @@ public class MoodDao {
             statement.executeUpdate();
         }
     }
+
+    public ResultSet getMood() {
+        String sql = "SELECT * FROM moods";
+        PreparedStatement ps = null;
+        try {
+            ps = connection.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            return rs;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
