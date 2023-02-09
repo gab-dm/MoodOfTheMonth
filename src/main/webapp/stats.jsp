@@ -204,7 +204,6 @@
                                                     }
                                                     Integer count = 0;
                                                     for (Mood m : publicMood) {
-
                                                 %>
                                                 <div class="comment-container">
                                                     <div class="note">
