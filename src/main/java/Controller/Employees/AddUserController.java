@@ -66,27 +66,7 @@ public class AddUserController extends HttpServlet {
             System.out.println("SQL Exception");
             throw new RuntimeException(e);
         }
-
-
-        System.out.println("name: " + name);
-        System.out.println("email: " + email);
-        System.out.println("birthdate: " + birthdate);
-
-        // get response writer
-        PrintWriter writer = response.getWriter();
-
-        // build HTML code
-        String htmlResponse = "<html>";
-        htmlResponse += "<h2>Your name is: " + name + "<br/>";
-        htmlResponse += "Your email is: " + email + "<br/>";
-        htmlResponse += "Your birthdate: " + birthdate + "<br/>";
-        htmlResponse += "There is now " + employeesDAO.getNumberOfEmployees() + " users<br/>";
-        htmlResponse += "<button onclick=\"location.href = '/helloworld/adminPanel';\" type=\"submit\" class=\"btn btn-lg btn-primary\">Back to panel</button>";
-        htmlResponse += "</h2>";
-        htmlResponse += "</html>";
-
-        // return response
-        writer.println(htmlResponse);
+        response.sendRedirect("/MoodOfTheMonth/adminPanel");
 
     }
 

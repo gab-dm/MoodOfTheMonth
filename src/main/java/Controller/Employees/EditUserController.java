@@ -55,10 +55,7 @@ public class EditUserController extends HttpServlet {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
-
-        response.sendRedirect("/helloworld/adminPanel");
-
+        response.sendRedirect("/MoodOfTheMonth/adminPanel");
 
     }
 }

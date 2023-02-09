@@ -34,7 +34,7 @@
                 <tr>
                     <td style="padding: 15px;color: #222" bgcolor="#f3f3f3">
                         <%=motm.getContent()%>
-                        <a href="/helloworld/motm"><%=motm.getMotm()%></a></td>
+                        <a href="/MoodOfTheMonth/motm"><%=motm.getMotm()%></a></td>
                     </td>
                 </tr>
                 <tr>

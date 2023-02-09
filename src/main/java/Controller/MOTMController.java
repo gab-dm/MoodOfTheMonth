@@ -47,6 +47,6 @@ public class MOTMController extends HttpServlet {
             throw new RuntimeException(e);
         }
 
-        resp.sendRedirect("/helloworld/dashboard");
+        resp.sendRedirect("/MoodOfTheMonth/dashboard");
     }
 }

@@ -46,7 +46,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/helloworld/adminPanel">Mood of the month</a>
+                <a class="navbar-brand" href="/MoodOfTheMonth/adminPanel">Mood of the month</a>
             </div>
             <!-- /.navbar-header -->
         </nav>

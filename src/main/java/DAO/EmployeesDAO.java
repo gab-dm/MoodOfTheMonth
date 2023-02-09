@@ -99,11 +99,11 @@ public class EmployeesDAO {
         }
     }
 
-//    public void deleteEmployees(int id) throws SQLException {
-//        String sql = "DELETE FROM users WHERE id = ?";
-//        try (PreparedStatement statement = connection.prepareStatement(sql)) {
-//            statement.setInt(1, id);
-//            statement.executeUpdate();
-//        }
-//    }
+    public void deleteEmployees(int id) throws SQLException {
+        String sql = "DELETE FROM employees WHERE uuid = ?";
+        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setInt(1, id);
+            statement.executeUpdate();
+        }
+    }
     }

@@ -203,8 +203,8 @@
                                                 <td><%= rs.getDate("birthdate")%></td>
                                                 <% int id = rs.getInt("uuid"); %>
                                                 <td class="text-right">
-                                                    <a href="/helloworld/updateUser?name=<%= rs.getString("name") %>&email=<%= rs.getString("email")%>&birthdate=<%= rs.getDate("birthdate")%>&uuid=<%=id%>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Edit</a>
-                                                    <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Remove</a>
+                                                    <a href="/MoodOfTheMonth/updateUser?name=<%= rs.getString("name") %>&email=<%= rs.getString("email")%>&birthdate=<%= rs.getDate("birthdate")%>&uuid=<%=id%>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Edit</a>
+                                                    <a href="/MoodOfTheMonth/deleteUser?id=<%=id%>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Remove</a>
                                                 </td>
                                             </tr>
                                         <%  } %>
