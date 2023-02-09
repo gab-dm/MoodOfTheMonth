@@ -56,9 +56,9 @@ public class EditUserController extends HttpServlet {
             throw new RuntimeException(e);
         }
 
-        System.out.println("inomd: " + name2);
-        // get response writer
-        PrintWriter writer = response.getWriter();
+
+        response.sendRedirect("/helloworld/adminPanel");
+
 
     }
 }
