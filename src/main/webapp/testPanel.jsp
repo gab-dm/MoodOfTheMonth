@@ -257,7 +257,7 @@
                                     <%  long count2 = moods.stream().filter(m -> m.getMark().equals(2)).count(); %>
                                     <span class="desc">Vote count: <%=count2%></span>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="<%=Math.round(count2/moodsSize*100)%>"
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="<%=Math.round(count2*100/moodsSize)%>"
                                              aria-valuemin="0" aria-valuemax="100" style="width:<%=Math.round(count2*100/moodsSize)%>%">
                                             <span class=""><%=Math.round(count2*100/moodsSize)%>%</span>
                                         </div>
@@ -299,8 +299,7 @@
                                     <img src="./resources/img/5.png" alt="super"/>
                                 </div>
                                 <div class="progress-bar-container">
-                                    <%  long count5 = moods.stream().filter(m -> m.getMark().equals(5)).count();
-                                    %>
+                                    <%  long count5 = moods.stream().filter(m -> m.getMark().equals(5)).count(); %>
                                     <span class="desc">Vote count: <%=count5%></span>
                                     <div class="progress">
                                         <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%=Math.round(count5*100/moodsSize)%>"
