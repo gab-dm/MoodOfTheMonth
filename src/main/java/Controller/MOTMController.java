@@ -47,30 +47,6 @@ public class MOTMController extends HttpServlet {
             throw new RuntimeException(e);
         }
 
-        System.out.println("note: " + note);
-        System.out.println("comment: " + comment);
-        System.out.println("Public: " + publicly);
-
-        // do some processing here...
-
-        // get response writer
-        PrintWriter writer = resp.getWriter();
-
-        // build HTML code
-        String htmlResponse = "<html>";
-        htmlResponse += "<h2>Your mood: " + note + "<br/>";
-        htmlResponse += "Your comment: " + comment + "<br/>";
-        if (checkbox != null) {
-            htmlResponse += "Your comment will be public <h2/>";
-        }
-        else {
-            htmlResponse += "Your comment will be private";
-        }
-
-        htmlResponse += "</html>";
-
-        // return response
-        writer.println(htmlResponse);
-
+        resp.sendRedirect("/helloworld/dashboard");
     }
 }
