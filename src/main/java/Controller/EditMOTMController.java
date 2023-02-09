@@ -1,5 +1,7 @@
 package Controller;
 
+import Model.Motm;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,6 +14,7 @@ import java.io.PrintWriter;
 @WebServlet("/editMOTM")
 public class EditMOTMController extends HttpServlet {
 
+    private Motm motmTemplate = new Motm();
     @Override
     public void init() {
         System.out.println("Servlet initialized successfully");
@@ -22,5 +25,21 @@ public class EditMOTMController extends HttpServlet {
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/edit-MOTM.jsp");
         dispatcher.forward(req, resp);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request,
+                          HttpServletResponse response) throws ServletException, IOException {
+
+        // read form fields
+        String subject = request.getParameter("name");
+        String content = request.getParameter("email-template");
+        String motm = request.getParameter("motm-template");
+
+        motmTemplate.setSubject(subject);
+        motmTemplate.setContent(content);
+        motmTemplate.setMotm(motm);
+
+        response.sendRedirect("/helloworld/adminPanel");
     }
 }
