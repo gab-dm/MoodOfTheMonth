@@ -58,9 +58,7 @@ public class AddUserController extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String birthdate = request.getParameter("date");
-//        SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
         try {
-//            Date date = format.parse(birthdate);
             Date date = Date.valueOf(birthdate);
             //appel de la méthode addEmployees de la classe Service.EmployeeService
             employeeService.addEmployees(name, email, date);

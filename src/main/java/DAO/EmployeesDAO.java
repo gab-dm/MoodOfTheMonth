@@ -88,16 +88,16 @@ public class EmployeesDAO {
 ////        }
 //    }
 
-//    public void updateEmployees(Employees employees) throws SQLException {
-//        String sql = "UPDATE employees SET name = ?, email = ?, birth_date = ? WHERE id = ?";
-//        try (PreparedStatement statement = connection.prepareStatement(sql)) {
-//            statement.setString(1, employees.getNameEmployee());
-//            statement.setString(2, employees.getEmailEmployee());
-//            statement.setDate(3, employees.getBirthDateEmployee());
-//            statement.setInt(4, employees.getUuidEmployee());
-//            statement.executeUpdate();
-//        }
-//    }
+    public void updateEmployees(Integer id, String nom, String email, Date date) throws SQLException {
+        String sql = "UPDATE employees SET name = ?, email = ?, birthdate = ? WHERE uuid = ?";
+        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setString(1, nom);
+            statement.setString(2, email);
+            statement.setDate(3, date);
+            statement.setInt(4, id);
+            statement.executeUpdate();
+        }
+    }
 
 //    public void deleteEmployees(int id) throws SQLException {
 //        String sql = "DELETE FROM users WHERE id = ?";

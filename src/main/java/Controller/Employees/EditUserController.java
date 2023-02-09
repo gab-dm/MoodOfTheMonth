@@ -1,5 +1,6 @@
 package Controller.Employees;
 
+import Model.Employees;
 import Service.EmployeeService;
 
 import javax.servlet.RequestDispatcher;
@@ -13,11 +14,13 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.sql.Date;
 
 @WebServlet("/updateUser")
 public class EditUserController extends HttpServlet {
     EmployeeService employeeService = new EmployeeService();
+
+    Employees employ = new Employees();
 
     @Override
     public void init() {
@@ -27,27 +30,33 @@ public class EditUserController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/add-user.jsp");
+        employ.setNameEmployee(req.getParameter("name"));
+        employ.setEmailEmployee(req.getParameter("email"));
+        employ.setBirthDateEmployee(java.sql.Date.valueOf(req.getParameter("birthdate")));
+        employ.setUuidEmployee(Integer.valueOf(req.getParameter("uuid")));
+        req.setAttribute("employ", employ);
+
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/edit-user.jsp");
         dispatcher.forward(req, resp);
     }
 
     @Override
-    protected void doPost(HttpServletRequest request,
+    protected void doPost(HttpServletRequest request2,
                           HttpServletResponse response) throws ServletException, IOException {
 
-        // read form fields
-        String name = request.getParameter("name");
-        String email = request.getParameter("email");
-        String birthdate = request.getParameter("date");
-        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        String name2 = request2.getParameter("name2");
+        String email2= request2.getParameter("email2");
+        String birthdate2 = request2.getParameter("date2");
+
+        Date date2 = Date.valueOf(birthdate2);
+        //appel de la méthode addEmployees de la classe Service.EmployeeService
         try {
-            Date date = format.parse(birthdate);
-            //appel de la méthode addEmployees de la classe Service.EmployeeService
-            //employeeService.updateEmployees(name, email, date);
-        } catch (ParseException e) {
+            employeeService.updateEmployees(employ.getUuidEmployee(), name2, email2, date2);
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
+        System.out.println("inomd: " + name2);
         // get response writer
         PrintWriter writer = response.getWriter();
 
