@@ -3,6 +3,8 @@
 <%@ page import="Service.EmployeeService" %>
 <%@ page import="DAO.EmployeesDAO" %>
 <%@ page import="java.sql.ResultSet" %>
+<%@ page import="DAO.MoodDao" %>
+<%@ page import="Model.Mood" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
 
@@ -229,9 +231,24 @@
                         <i class="fa fa-tachometer fa-fw"></i> Stats
                     </div>
                     <div class="panel-body" id="stats">
-
+                        <%  MoodDao moodDao = new MoodDao();
+                            ArrayList<Mood> moods = new ArrayList<Mood>();
+                            ResultSet moodRs = moodDao.getMood();
+                            while (moodRs.next()) {
+                                moods.add(new Mood(moodRs.getInt("mark"), moodRs.getString("comment"), moodRs.getString("name")));
+                            }
+                            Integer moodsSize = moods.size();
+                            if (moods.size() == 0) {
+                                moodsSize = 1;
+                            }
+                            float avg = 0;
+                            for (Mood m : moods) {
+                                avg = avg + m.getMark();
+                            }
+                            avg = Math.round(avg * 10 / moodsSize);
+                        %>
                         <div class="note">
-                            4.2<small>/5</small>
+                            <%=avg/10%><small>/5</small>
                             <p>Avg Mood</p>
                         </div>
 
@@ -241,11 +258,12 @@
                                     <img src="./resources/img/1.png" alt="super"/>
                                 </div>
                                 <div class="progress-bar-container">
-                                    <span class="desc">Vote count: 10</span>
+                                    <%  long count1 = moods.stream().filter(m -> m.getMark().equals(1)).count(); %>
+                                    <span class="desc">Vote count: <%=count1%></span>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="10"
-                                             aria-valuemin="0" aria-valuemax="100" style="width:10%">
-                                            <span class="">10%</span>
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="<%=Math.round(count1*100/moodsSize)%>"
+                                             aria-valuemin="0" aria-valuemax="100" style="width:<%=Math.round(count1*100/moodsSize)%>%">
+                                            <span class=""><%=Math.round(count1*100/moodsSize)%>%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -255,11 +273,12 @@
                                     <img src="./resources/img/2.png" alt="super"/>
                                 </div>
                                 <div class="progress-bar-container">
-                                    <span class="desc">Vote count: 5</span>
+                                    <%  long count2 = moods.stream().filter(m -> m.getMark().equals(2)).count(); %>
+                                    <span class="desc">Vote count: <%=count2%></span>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="5"
-                                             aria-valuemin="0" aria-valuemax="100" style="width:5%">
-                                            <span class="">5%</span>
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="<%=Math.round(count2*100/moodsSize)%>"
+                                             aria-valuemin="0" aria-valuemax="100" style="width:<%=Math.round(count2*100/moodsSize)%>%">
+                                            <span class=""><%=Math.round(count2*100/moodsSize)%>%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -269,11 +288,12 @@
                                     <img src="./resources/img/3.png" alt="super"/>
                                 </div>
                                 <div class="progress-bar-container">
-                                    <span class="desc">Vote count: 15</span>
+                                    <%  long count3 = moods.stream().filter(m -> m.getMark().equals(3)).count(); %>
+                                    <span class="desc">Vote count: <%=count3%></span>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-neutral" role="progressbar" aria-valuenow="15"
-                                             aria-valuemin="0" aria-valuemax="100" style="width:15%">
-                                            <span class="">15%</span>
+                                        <div class="progress-bar progress-bar-neutral" role="progressbar" aria-valuenow="<%=Math.round(count3*100/moodsSize)%>"
+                                             aria-valuemin="0" aria-valuemax="100" style="width:<%=Math.round(count3*100/moodsSize)%>%">
+                                            <span class=""><%=Math.round(count3*100/moodsSize)%>%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -283,11 +303,12 @@
                                     <img src="./resources/img/4.png" alt="super"/>
                                 </div>
                                 <div class="progress-bar-container">
-                                    <span class="desc">Vote count: 45</span>
+                                    <%  long count4 = moods.stream().filter(m -> m.getMark().equals(4)).count(); %>
+                                    <span class="desc">Vote count: <%=count4%></span>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-midsuccess" role="progressbar" aria-valuenow="45"
-                                             aria-valuemin="0" aria-valuemax="100" style="width:45%">
-                                            <span class="">45%</span>
+                                        <div class="progress-bar progress-bar-midsuccess" role="progressbar" aria-valuenow="<%=Math.round(count4*100/moodsSize)%>"
+                                             aria-valuemin="0" aria-valuemax="100" style="width:<%=Math.round(count4*100/moodsSize)%>%">
+                                            <span class=""><%=Math.round(count4*100/moodsSize)%>%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -297,11 +318,12 @@
                                     <img src="./resources/img/5.png" alt="super"/>
                                 </div>
                                 <div class="progress-bar-container">
-                                    <span class="desc">Vote count: 25</span>
+                                    <%  long count5 = moods.stream().filter(m -> m.getMark().equals(5)).count(); %>
+                                    <span class="desc">Vote count: <%=count5%></span>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="25"
-                                             aria-valuemin="0" aria-valuemax="100" style="width:25%">
-                                            <span class="">25%</span>
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%=Math.round(count5*100/moodsSize)%>"
+                                             aria-valuemin="0" aria-valuemax="100" style="width:<%=Math.round(count5*100/moodsSize)%>%">
+                                            <span class=""><%=Math.round(count5*100/moodsSize)%>%</span>
                                         </div>
                                     </div>
                                 </div>
