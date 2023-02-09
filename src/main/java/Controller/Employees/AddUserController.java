@@ -60,7 +60,7 @@ public class AddUserController extends HttpServlet {
         String birthdate = request.getParameter("date");
         try {
             Date date = Date.valueOf(birthdate);
-            //appel de la méthode addEmployees de la classe Service.EmployeeService
+
             employeeService.addEmployees(name, email, date);
         } catch (SQLException e) {
             System.out.println("SQL Exception");

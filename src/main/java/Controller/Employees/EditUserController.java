@@ -49,7 +49,7 @@ public class EditUserController extends HttpServlet {
         String birthdate2 = request2.getParameter("date2");
 
         Date date2 = Date.valueOf(birthdate2);
-        //appel de la méthode addEmployees de la classe Service.EmployeeService
+
         try {
             employeeService.updateEmployees(employ.getUuidEmployee(), name2, email2, date2);
         } catch (SQLException e) {
