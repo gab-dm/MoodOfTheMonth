@@ -40,6 +40,6 @@ public class EditMOTMController extends HttpServlet {
         motmTemplate.setContent(content);
         motmTemplate.setMotm(motm);
 
-        response.sendRedirect("/MoodOfTheMonth/adminPanel");
+        response.sendRedirect("/MoodOfTheMonth/template");
     }
 }
